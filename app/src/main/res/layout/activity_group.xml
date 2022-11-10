@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/nsvContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chat_background_color"
+        >
+
+      <include
+          layout="@layout/all_toolbar_dark"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivUserProfile"
+          android:layout_width="match_parent"
+          android:layout_height="256dp"
+          android:background="@color/colorPrimary"
+          android:fitsSystemWindows="true"
+          android:scaleType="centerCrop"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/toolbar"
+          app:srcCompat="@drawable/ic_group"
+          />
+
+      <LinearLayout
+          android:id="@+id/llGroupDetail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="@dimen/dp10"
+          android:layout_marginStart="@dimen/dp5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ivUserProfile"
+          >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTagName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/group_name"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:layout_marginStart="@dimen/dp5"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTagDesc"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:inputType="textCapWords"
+            android:textColor="@color/card_view_title"
+            android:textSize="@dimen/sp16"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTagDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/desc"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:layout_marginStart="@dimen/dp5"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_group_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTagDesc"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/card_view_title"
+            android:textSize="@dimen/sp16"
+            android:maxLines="4"
+            android:scrollbars="vertical"
+            android:maxLength="240"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_privacy"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingTop="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp5"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGroupType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTagDesc"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp5"
+            android:textColor="@color/card_view_title"
+            android:textSize="@dimen/sp14"
+            tools:text="Public Channel"
+            android:fontFamily="@font/sf_pro_display_regular"
+            />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/llParticipants"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:paddingStart="@dimen/dp10"
+          android:paddingEnd="@dimen/dp10"
+          android:paddingBottom="@dimen/dp10"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/llGroupDetail"
+          >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTagDesc"
+            android:text="@string/participants"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:textColor="@color/card_view_title"
+            android:textSize="@dimen/sp16"
+            android:fontFamily="@font/sf_pro_display_medium"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoParticipants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/no_participants"
+            android:textColor="@color/chat_item_title_color"
+            android:textSize="@dimen/no_chat_title_size"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="MissingConstraints"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGroupUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_user_list"
+            />
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/llParticipants"
+          />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnUpdate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dp36"
+      android:layout_marginRight="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp10"
+      android:layout_marginBottom="@dimen/dp5"
+      android:text="@string/update"
+      android:layout_gravity="bottom"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:background="@drawable/blue_button_bg"
+      android:letterSpacing="0.025"
+      android:textSize="@dimen/sp16"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:padding="@dimen/dp12"/>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fabDone"
+      android:layout_width="@dimen/fab_default_size"
+      android:layout_height="@dimen/fab_default_size"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:visibility="gone"
+      android:src="@drawable/ic_chevron_right"
+      app:backgroundTint="@color/fab_enable_bg"
+      app:fabCustomSize="@dimen/fab_default_size"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/chat_history_item_padding">
+
+  <com.ripbull.ertc.components.CircleImageView
+      android:id="@+id/ivImage"
+      android:layout_width="@dimen/dp48"
+      android:layout_height="@dimen/dp48"
+      android:cropToPadding="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints"
+      android:src="@drawable/ic_group_default"
+      style="@style/iv_all_userprofile" />
+
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/recycler_view_item_margin"
+      android:textColor="@color/chat_user_name_color"
+      android:textSize="@dimen/sp18"
+      android:paddingStart="10dp"
+      android:fontFamily="@font/sf_pro_display_medium"
+      app:layout_constraintStart_toEndOf="@id/ivImage"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="@tools:sample/full_names" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvMembers"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/recycler_view_item_margin"
+      android:paddingStart="10dp"
+      android:textColor="@color/user_text_color"
+      android:textSize="@dimen/sp14"
+      android:maxLines="2"
+      android:visibility="visible"
+      android:ellipsize="end"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintStart_toEndOf="@id/ivImage"
+      app:layout_constraintTop_toBottomOf="@+id/tvName"
+      tools:text="@tools:sample/full_names" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvJoin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/join"
+      android:layout_gravity="bottom"
+      android:textColor="@color/add_participant_color"
+      android:textSize="@dimen/sp16"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:visibility="gone"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivPrivate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:padding="@dimen/dp5"
+      app:srcCompat="@drawable/ic_private"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/tvName"/>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivOptionMenu"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:padding="@dimen/dp10"
+      app:srcCompat="@drawable/ic_option_menu"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvPrivate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:padding="@dimen/dp10"
+      android:text="@string/txt_private"
+      android:textSize="@dimen/sp16"
+      android:textColor="@color/email_text_color"
+      android:fontFamily="@font/sf_pro_display_medium"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

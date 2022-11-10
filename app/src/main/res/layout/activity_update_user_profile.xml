@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_background_color"
+    android:fitsSystemWindows="true"
+    >
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/ablContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fitsSystemWindows="true"
+      >
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/ctlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_collapsingtoolbar_height"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+        app:titleEnabled="false"
+        >
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivUserProfile"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="?attr/colorPrimary"
+          android:fitsSystemWindows="true"
+          android:scaleType="centerCrop"
+          app:srcCompat="@drawable/ic_person_default_24dp"
+          app:layout_collapseMode="parallax"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/profileName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/email"
+          android:padding="@dimen/dp5"
+          android:layout_gravity="bottom"
+          android:layout_marginLeft="@dimen/dp10"
+          android:textColor="@color/white"
+          android:textSize="@dimen/sp30" />
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:layout_gravity="top"
+          app:layout_collapseMode="pin"
+          app:titleTextAppearance="@style/AppTheme.Toolbar.Dark.Title"
+          app:titleTextColor="@color/white_text_color"
+          />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/nsvContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/dp10"
+          android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10">
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tvStatusTag"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/status"
+              android:textColor="@color/card_view_tag"
+              android:textSize="@dimen/sp14"/>
+
+          <androidx.appcompat.widget.AppCompatEditText
+              android:id="@+id/etStatus"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tvStatusTag"
+              android:paddingBottom="@dimen/dp15"
+              android:paddingTop="@dimen/dp5"
+              android:paddingStart="@dimen/dp5"
+              android:paddingEnd="@dimen/dp5"
+              android:hint="Enter status..."
+              android:fontFamily="@font/sf_pro_display_regular"
+              android:maxLines="4"
+              android:scrollbars="vertical"
+              android:maxLength="140"
+              android:textColor="@color/card_view_title"
+              android:textSize="@dimen/sp16"/>
+
+        </RelativeLayout>
+
+      </androidx.cardview.widget.CardView>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnUpdate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dp36"
+      android:layout_marginRight="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp20"
+      android:layout_marginBottom="@dimen/dp20"
+      android:text="@string/update"
+      android:layout_gravity="bottom"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:background="@drawable/blue_button_bg"
+      android:letterSpacing="0.025"
+      android:textSize="@dimen/sp16"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:padding="@dimen/dp12"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

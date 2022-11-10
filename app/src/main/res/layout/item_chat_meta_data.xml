@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlChat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/chat_message_my_side_margin"
+    android:layout_marginRight="@dimen/chat_message_my_side_margin"
+    android:paddingTop="@dimen/chat_message_view_padding"
+    android:paddingBottom="@dimen/chat_message_view_padding"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:padding="@dimen/dp5"
+      android:text="11/03/2019"
+      android:textColor="@color/chat_date_info_color"
+      android:textSize="@dimen/chat_timestamp_size"
+      android:visibility="gone"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvChatMetaData"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:layout_marginTop="@dimen/dp10"
+      android:background="@drawable/chat_meta_data_bg"
+      android:ellipsize="end"
+      android:maxLines="2"
+      android:paddingStart="@dimen/thread_drawable_padding"
+      android:paddingEnd="@dimen/thread_drawable_padding"
+      android:paddingTop="@dimen/chat_drawable_padding"
+      android:paddingBottom="@dimen/chat_drawable_padding"
+      android:textColor="@color/chat_info_text_color"
+      android:textSize="@dimen/chat_info_text_size"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

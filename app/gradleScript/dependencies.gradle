@@ -1,0 +1,75 @@
+import dependencies.*
+
+apply from: Deps.common
+
+dependencies {
+
+  implementation Deps.AndroidXLibs.multidex
+
+  //Module
+  //implementation 'com.ripbull.coresdk:ripbull-chat-sdk:1.0.0.rc11-debug'
+//  implementation fileTree(dir: 'libs', include: ['*.aar'])
+  implementation project(Deps.Module.permission)
+  implementation project(Deps.Module.coreAttachment)
+  implementation(Deps.Module.coreSdk){
+    transitive true
+  }
+
+
+  implementation Deps.Lifecycle.extension
+  kapt Deps.Lifecycle.annotation_compliler
+
+  implementation Deps.Facebook.stetho
+
+  implementation Deps.AndroidXLibs.constraintlayout
+  implementation Deps.AndroidXLibs.materialDesign
+  implementation Deps.OkHttp3.okHttp3
+
+  //External
+  implementation Deps.External.roundedImage
+
+  //Glide
+  implementation Deps.Glide.glide
+  kapt Deps.Glide.annotationCompiler
+  kapt Deps.Glide.annotationProcessor
+
+  //Play services
+  implementation Deps.Gms.play_services_location
+  implementation Deps.Gms.play_services_places
+  implementation Deps.Gms.play_services_maps
+  implementation Deps.Gms.play_services_gms_places
+
+  //RxJava
+  implementation Deps.RxJava.rxAndroid
+  implementation Deps.RxJava.rxjava2
+  implementation Deps.RxJava.rxrelay2
+  implementation Deps.RxJava.rxBinding
+  implementation Deps.RxJava.rxBindingKotlin
+
+  //Paging
+  implementation Deps.Paging.runtime
+  implementation Deps.Paging.rxjava2
+  testImplementation Deps.Paging.testCommon
+
+  //FCM
+  //implementation Deps.Firebase.firebase_core
+  implementation Deps.Firebase.firebase_messaging
+
+
+  //firebase
+  implementation Deps.Firebase.firebase_perf
+  implementation Deps.Firebase.firebaseCrashlytics
+
+  //Emoji Decoder
+  implementation Deps.External.emojiDecoder
+
+  //giphy SDK
+  implementation Deps.External.giphySDK
+  implementation Deps.HyperLink.jsoup
+
+  //lifecycle
+  implementation Deps.AndroidXLibs.lifeCycle
+
+  // Auth0
+  implementation 'com.auth0.android:auth0:2.+'
+}

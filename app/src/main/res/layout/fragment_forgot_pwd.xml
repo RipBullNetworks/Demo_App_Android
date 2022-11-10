@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollForgetPassword"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="?attr/colorPrimary"
+    tools:context=".onboard.OnBoardingActivity"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/forgetPassword"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <include layout="@layout/login_header"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvForwardPwdTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      style="@style/Widget.App.TextView.Title"
+      android:text="@string/forgot_pwd_title"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:layout_marginBottom="@dimen/dp24"
+      android:fontFamily="@font/sf_pro_display_regular"
+      app:layout_constraintBottom_toTopOf="@+id/lytWrapper"
+      />
+  <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvError"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="@dimen/dp36"
+          android:layout_marginRight="@dimen/dp36"
+          android:textColor="@color/red_600"
+          android:textSize="@dimen/sp14"
+          android:visibility="visible"
+          app:layout_constraintBottom_toTopOf="@id/lytWrapper"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          style="@style/Widget.App.TextView.Title"
+          />
+
+  <LinearLayout
+      android:id="@+id/lytWrapper"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dp36"
+      android:layout_marginRight="@dimen/dp36"
+      android:orientation="vertical"
+      android:layout_marginTop="@dimen/dp72"
+      app:layout_constraintTop_toBottomOf="@+id/loginHeader"
+      android:background="@drawable/all_edittext_background"
+      >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/username"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/username"
+          android:maxLines="1"
+          android:singleLine="true"
+          android:imeOptions="actionDone"
+          android:textCursorDrawable="@null"
+          android:background="@drawable/all_edittext_background"
+          android:textColorHint="@color/login_text_hint"
+          tools:text="manidinesh89@gmail.com"
+          style="@style/Widget.App.EditText"
+          />
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnAction"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dp36"
+      android:layout_marginRight="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp20"
+      android:text="DONE"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/lytWrapper"
+      android:fontFamily="@font/sf_pro_display_medium"
+      style="@style/Widget.App.Button"
+      />
+
+
+  <TextView
+      android:id="@+id/txtMoveBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      style="@style/Widget.App.TextView.Title"
+      android:text="Back"
+      android:drawableStart="@drawable/all_back"
+      android:drawablePadding="@dimen/dp7"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnAction"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:layout_marginTop="@dimen/dp32"
+      android:layout_marginBottom="@dimen/dp20"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

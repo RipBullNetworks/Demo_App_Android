@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="4dp"
+      android:background="@drawable/attachment_shadow"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?android:selectableItemBackground"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/gallery_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_crop_original_white_24dp"
+            app:circleColor="@color/purple_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attachment_type_gallery"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/audio_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_headset_white_24dp"
+            app:circleColor="@color/orange_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attachment_type_audio"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/document_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_insert_drive_file_white_24dp"
+            app:circleColor="@color/red_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attachment_type_file"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/contact_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_person_default_24dp"
+            app:circleColor="@color/blue_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attachment_type_contact"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/camera_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_camera_white_24dp"
+            app:circleColor="@color/green_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/attachment_type_camera"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/location_linear_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/location_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_location_white_24dp"
+            app:circleColor="@color/blue_grey_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attachment_type_location"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/giphy_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_gif_white_24dp"
+            app:circleColor="@color/cyan_400"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/attachment_type_gif"
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          >
+
+        <com.ripbull.ertc.components.CircleColorImageView
+            android:id="@+id/close_button"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
+            app:circleColor="@color/gray50"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=" "
+            style="@style/AttachmentType"
+            />
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</LinearLayout>

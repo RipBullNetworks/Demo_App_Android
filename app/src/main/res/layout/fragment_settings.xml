@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="@dimen/dp150"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <com.ripbull.ertc.components.CircleImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_height="@dimen/dp76"
+            android:layout_width="@dimen/dp76"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_chat_user_default"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileName"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sp24"
+            android:layout_marginTop="@dimen/dp10"
+            android:fontFamily="@font/sf_pro_display_semi_bold"
+            android:textColor="@color/setting_title_color" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp5"
+            android:src="@drawable/ic_my_profile"
+            android:padding="@dimen/dp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/my_profile"
+            android:layout_marginLeft="16dp"
+            astyle="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/user_setting_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFavMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_fav_messages"
+            android:padding="@dimen/dp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/fav_messages"
+            android:layout_marginLeft="@dimen/dp10"
+            astyle="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/user_setting_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNotificationSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp5"
+            android:src="@drawable/ic_notification"
+            android:padding="@dimen/dp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/notifications"
+            android:layout_marginLeft="@dimen/dp15"
+            style="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/user_setting_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp5"
+            android:src="@drawable/ic_sdk_ver"
+            android:padding="@dimen/dp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/sdk_version"
+            android:layout_marginLeft="@dimen/dp20"
+            style="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/user_setting_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="7dp"
+            android:src="@drawable/ic_change_password"
+            android:padding="@dimen/dp8" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/change_password_setting"
+            android:layout_marginLeft="18dp"
+            style="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/user_setting_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp5"
+            android:src="@drawable/ic_logout"
+            android:padding="@dimen/dp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/log_out"
+            android:layout_marginLeft="17dp"
+            style="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/user_setting_text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoadTesting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp5"
+            android:src="@drawable/ic_sdk_ver"
+            android:padding="@dimen/dp10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Load testing"
+            android:layout_marginLeft="@dimen/dp20"
+            style="TextAppearance.MaterialComponents.Body2"
+            android:layout_gravity="center"
+            android:textSize="@dimen/user_setting_text_size"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/group_exit_color" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlGlobalSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp10"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="24dp"
+            android:text="@string/global_search"
+            android:textColor="@color/user_setting_text_color"
+            android:textSize="@dimen/sp16"
+            app:fontFamily="@font/sf_pro_display_medium"
+            >
+
+        </androidx.appcompat.widget.AppCompatTextView>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            >
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbSearchSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:button="@drawable/slide_toggle"
+                android:layoutDirection="rtl"
+                android:textColor="@color/card_view_title"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="@dimen/dp10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/on"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="@dimen/dp10"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/off"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

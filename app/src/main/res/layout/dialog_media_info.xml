@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittext_white_background"
+    android:paddingTop="@dimen/dp24"
+    android:paddingStart="@dimen/dp24"
+    android:paddingEnd="@dimen/dp24"
+    android:paddingBottom="@dimen/dp5"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvSender"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:text="@string/uploaded_by"
+      android:textColor="@color/card_view_tag"
+      android:textSize="@dimen/sp16"
+      />
+
+  <com.ripbull.ertc.components.AvatarImageView
+      android:id="@+id/contactDP"
+      android:layout_width="@dimen/dp40"
+      android:layout_height="@dimen/dp40"
+      android:cropToPadding="true"
+      android:layout_marginTop="@dimen/dp10"
+      android:layout_below="@+id/tvSender"
+      android:foreground="@drawable/ic_contact_photo_background"
+      tools:src="@color/blue_600"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ellipsize="marquee"
+      android:singleLine="true"
+      style="TextAppearance.MaterialComponents.Body2"
+      android:layout_toRightOf="@+id/contactDP"
+      android:layout_marginTop="@dimen/dp8"
+      android:layout_marginStart="@dimen/dp10"
+      android:layout_below="@+id/tvSender"
+      android:textColor="@color/user_text_color"
+      android:textSize="@dimen/user_text_size"
+      android:drawablePadding="@dimen/dp5"
+      android:fontFamily="@font/sf_pro_display_regular"
+      tools:text="Frieeeeeeedrich Nieeeeeeeeeetzsche"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvCreatedAt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ellipsize="marquee"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:singleLine="true"
+      android:layout_below="@+id/tvName"
+      android:layout_toRightOf="@+id/contactDP"
+      android:layout_marginTop="@dimen/dp2"
+      android:layout_marginStart="@dimen/dp10"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:textDirection="ltr"
+      android:textColor="@color/email_text_color"
+      android:textSize="@dimen/email_text_size"
+      tools:text="22/11/2021 02:00 AM"
+      />
+
+  <View
+      android:id="@+id/view1"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:layout_marginTop="@dimen/dp15"
+      android:layout_below="@+id/contactDP"
+      android:background="@drawable/divider"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvDetails"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:layout_below="@+id/view1"
+      android:layout_marginTop="@dimen/dp15"
+      android:text="@string/details"
+      android:textColor="@color/card_view_tag"
+      android:textSize="@dimen/sp16"
+      />
+
+  <com.ripbull.ertc.components.CircleImageView
+      android:id="@+id/mediaImage"
+      android:layout_width="@dimen/dp40"
+      android:layout_height="@dimen/dp40"
+      android:cropToPadding="true"
+      android:layout_below="@+id/tvDetails"
+      android:layout_marginTop="@dimen/dp10"
+      tools:ignore="MissingConstraints"
+      android:src="@drawable/ic_media"
+      style="@style/iv_all_userprofile" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvFileName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ellipsize="marquee"
+      android:singleLine="true"
+      style="TextAppearance.MaterialComponents.Body2"
+      android:layout_toRightOf="@+id/mediaImage"
+      android:layout_marginTop="@dimen/dp8"
+      android:layout_marginStart="@dimen/dp10"
+      android:layout_below="@+id/tvDetails"
+      android:textColor="@color/user_text_color"
+      android:textSize="@dimen/user_text_size"
+      android:drawablePadding="@dimen/dp5"
+      android:fontFamily="@font/sf_pro_display_regular"
+      tools:text="image.jpg"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvSize"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ellipsize="marquee"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:singleLine="true"
+      android:layout_below="@+id/tvFileName"
+      android:layout_toRightOf="@+id/mediaImage"
+      android:layout_marginTop="@dimen/dp2"
+      android:layout_marginStart="@dimen/dp10"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:textDirection="ltr"
+      android:textColor="@color/email_text_color"
+      android:textSize="@dimen/email_text_size"
+      tools:text="600*600"
+      />
+
+  <View
+      android:id="@+id/view2"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:layout_marginTop="@dimen/dp15"
+      android:layout_below="@+id/mediaImage"
+      android:background="@drawable/divider"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnClose"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view2"
+      android:layout_marginTop="@dimen/dp15"
+      android:layout_centerInParent="true"
+      android:background="@null"
+      android:fontFamily="@font/sf_pro_display_bold"
+      android:text="@string/close"
+      android:textColor="@color/fab_disable_bg"
+      android:textSize="@dimen/sp14"
+      />
+</RelativeLayout>

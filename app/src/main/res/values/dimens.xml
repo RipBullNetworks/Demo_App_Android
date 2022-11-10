@@ -1,0 +1,140 @@
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+  <dimen name="bottom_navigation_height">56dp</dimen>
+
+  <dimen name="all_padding">@dimen/dp16</dimen>
+  <dimen name="all_margin">@dimen/dp16</dimen>
+
+  <dimen name="all_collapsingtoolbar_height">@dimen/dp256</dimen>
+
+  <dimen name="all_userprofile_height">@dimen/dp48</dimen>
+  <dimen name="all_userprofile_width">@dimen/dp48</dimen>
+
+
+  <dimen name="dp16">16dp</dimen>
+  <dimen name="dp48">48dp</dimen>
+  <dimen name="dp256">256dp</dimen>
+  <dimen name="dp150">150dp</dimen>
+  <dimen name="dp73">73dp</dimen>
+  <dimen name="dp76">76dp</dimen>
+  <dimen name="dp10">10dp</dimen>
+  <dimen name="dp20">20dp</dimen>
+  <dimen name="dp25">25dp</dimen>
+  <dimen name="dp4">4dp</dimen>
+  <dimen name="dp240">240dp</dimen>
+  <dimen name="dp15">15dp</dimen>
+  <dimen name="dp30">30dp</dimen>
+  <dimen name="dp12">12dp</dimen>
+  <dimen name="dp36">36dp</dimen>
+  <dimen name="dp72">72dp</dimen>
+  <dimen name="dp24">24dp</dimen>
+  <dimen name="dp7">7dp</dimen>
+  <dimen name="dp32">32dp</dimen>
+  <dimen name="dp2">2dp</dimen>
+  <dimen name="dp8">8dp</dimen>
+  <dimen name="dp40">40dp</dimen>
+  <dimen name="dp14">14dp</dimen>
+
+  <dimen name="sp24">24sp</dimen>
+  <dimen name="sp14">14sp</dimen>
+  <dimen name="sp30">30sp</dimen>
+  <dimen name="sp20">20sp</dimen>
+  <dimen name="dp5">5dp</dimen>
+  <dimen name="sp16">16sp</dimen>
+  <dimen name="sp15">15sp</dimen>
+  <dimen name="sp12">12sp</dimen>
+  <dimen name="sp18">18sp</dimen>
+  <dimen name="dp100">100dp</dimen>
+  <dimen name="dp50">50dp</dimen>
+
+  <dimen name="contact_photo_target_size">64dp</dimen>
+
+  <dimen name="chat_blocked_height">60dp</dimen>
+  <dimen name="chat_box_padding">8dp</dimen>
+  <dimen name="textsize_toolbardark_title">18sp</dimen>
+  <dimen name="chat_box_icon_size">20dp</dimen>
+  <dimen name="chat_box_icon_padding">6dp</dimen>
+  <dimen name="chat_box_edit_text_padding">5dp</dimen>
+  <dimen name="toolbar_text_padding">5dp</dimen>
+  <dimen name="chat_message_view_padding">3.5dp</dimen>
+  <dimen name="chat_message_my_side_margin">8dp</dimen>
+  <dimen name="chat_message_other_side_margin">55dp</dimen>
+  <dimen name="chat_text_margin_bottom">15dp</dimen>
+  <dimen name="chat_text_padding">15dp</dimen>
+  <dimen name="chat_text_padding_top">5dp</dimen>
+  <dimen name="chat_text_margin_right">5dp</dimen>
+  <dimen name="chat_text_size">16sp</dimen>
+  <dimen name="chat_group_user_size">12sp</dimen>
+  <dimen name="chat_timestamp_size">11sp</dimen>
+  <dimen name="chat_history_item_padding">10dp</dimen>
+  <dimen name="chat_item_title_size">16dp</dimen>
+  <dimen name="chat_item_subtitle_size">14dp</dimen>
+  <dimen name="chat_item_date_size">12dp</dimen>
+  <dimen name="no_chat_title_size">16sp</dimen>
+  <dimen name="toolbar_title_margin_start">16dp</dimen>
+  <dimen name="recycler_view_item_margin">10dp</dimen>
+
+  <dimen name="chat_rounded_corner">18dp</dimen>
+  <dimen name="chat_time_text_padding">4dp</dimen>
+  <dimen name="chat_audio_box">27dp</dimen>
+  <dimen name="textsize_toolbardark_sub_title">13sp</dimen>
+  <dimen name="chat_contact_dp">34dp</dimen>
+  <dimen name="location_share_bottomsheet">240dp</dimen>
+  <dimen name="app_text_size_medium">14sp</dimen>
+
+  //Thread
+  <dimen name="dialog_corner">14dp</dimen>
+  <dimen name="thread_box_padding">10dp</dimen>
+  <dimen name="thread_message_size">13sp</dimen>
+  <dimen name="thread_box_margin">15dp</dimen>
+  <dimen name="list_user_dp">5dp</dimen>
+  <dimen name="thread_count_box_corner">20dp</dimen>
+  <dimen name="thread_count_text_size">14sp</dimen>
+  <dimen name="thread_msg_bg_corner">4dp</dimen>
+  <dimen name="thread_drawable_padding">10dp</dimen>
+  <dimen name="chat_msg_count_txt_size">10sp</dimen>
+  <dimen name="fab_margin">12dp</dimen>
+  <dimen name="chat_msg_count_size">16sp</dimen>
+  <dimen name="chat_msg_count_elevation">6dp</dimen>
+  <dimen name="fab_size">36dp</dimen>
+
+  //Group
+  <dimen name="chat_info_text_size">12sp</dimen>
+  <dimen name="chat_meta_data_corner">10dp</dimen>
+  <dimen name="chat_drawable_padding">5dp</dimen>
+
+  //Mute Notifications
+  <dimen name="notification_text_size">16sp</dimen>
+  <dimen name="mute_setting_box_margin">10dp</dimen>
+
+  <dimen name="rb_padding">10dp</dimen>
+
+  //Reaction
+  <dimen name="reaction_text_size">14sp</dimen>
+  <dimen name="empty_list_msg_margin">150dp</dimen>
+  <dimen name="reaction_list_padding">8dp</dimen>
+
+  //User Settings
+  <dimen name="user_setting_text_size">16sp</dimen>
+
+  <dimen name="bottom_sheet_text_size">20sp</dimen>
+  <dimen name="chat_user_name_margin">20dp</dimen>
+  <dimen name="user_text_size">16sp</dimen>
+  <dimen name="email_text_size">12sp</dimen>
+  <dimen name="fab_default_size">56dp</dimen>
+
+  <dimen name="sent_to_channel_size">11sp</dimen>
+  <dimen name="sent_to_channel_padding">3dp</dimen>
+  <dimen name="drawable_padding">5dp</dimen>
+  <dimen name="dp87">87dp</dimen>
+  <dimen name="dp95">93dp</dimen>
+  <dimen name="unread_count_size">9sp</dimen>
+  <dimen name="unread_count_padding">3dp</dimen>
+  <dimen name="forward_text_size">10.5sp</dimen>
+  <dimen name="backup_screen_top_margin">60dp</dimen>
+
+  <dimen name="channel_text_title">16sp</dimen>
+  <dimen name="gallery_item_corner">9dp</dimen>
+</resources>

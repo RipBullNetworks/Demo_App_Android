@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+	package
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:2:5-34
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:1-19:12
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:4:3-77
+	android:name
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:4:20-74
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:5:3-65
+	android:name
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:5:20-63
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:6:3-75
+	android:name
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:6:20-72
+application
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:8:3-18:17
+service#com.ripbull.coresdk.offline.OfflineMessageService
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:9:5-12:68
+	android:exported
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:11:9-33
+	android:permission
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:12:9-65
+	android:name
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:10:9-54
+receiver#com.ripbull.coresdk.fcm.NotificationBroadcastReceiver
+ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:14:5-17:16
+	android:exported
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:16:9-33
+	android:name
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:15:9-58
+uses-sdk
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		ADDED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml

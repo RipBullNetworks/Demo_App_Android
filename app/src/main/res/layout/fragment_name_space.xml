@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollNameSpace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:scrollbars="none"
+    tools:context=".onboard.OnBoardingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/namespace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGoToAdminPortal"
+            style="@style/Widget.App.TextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:padding="@dimen/dp10"
+            android:text="@string/go_to_admin_portal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnValidateName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnValidateName"
+            style="@style/Widget.App.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp36"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp36"
+            android:layout_marginBottom="@dimen/dp20"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="@string/title_next"
+            android:textColorHint="@color/login_text_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLytAccessCode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/Widget.App.TextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40"
+            android:maxLines="5"
+            android:paddingStart="@dimen/dp36"
+            android:paddingEnd="@dimen/dp36"
+            android:textColor="@color/red_600"
+            android:textSize="@dimen/sp14"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginHeader" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLytAccessCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp36"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp36"
+            android:fontFamily="sans-serif-medium"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/txtLytNamespace">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAccessCode"
+                style="@style/Widget.App.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/all_edittext_background"
+                android:drawableRight="@drawable/ic_question"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:hint="@string/hint_access_code"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:text="vuioj54w"
+                android:singleLine="true"
+                android:textColorHint="@color/login_text_hint"
+                android:textCursorDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLytNamespace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp36"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp36"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/tvError">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNamespace"
+                style="@style/Widget.App.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/all_edittext_background"
+                android:drawableRight="@drawable/ic_question"
+                android:hint="@string/hint_namespace"
+                android:text="niravjj1.dev.ertc.com"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/login_text_hint"
+                android:textCursorDrawable="@null" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include layout="@layout/login_header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

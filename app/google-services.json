@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "1080757391354",
+    "firebase_url": "https://ertc-4b54e.firebaseio.com",
+    "project_id": "ertc-4b54e",
+    "storage_bucket": "ertc-4b54e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080757391354:android:05bbf77da083a336",
+        "android_client_info": {
+          "package_name": "com.ripbull.coresdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWb4WBzA8EE67qeIj3Gu3ZgVwUfAIMVrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1080757391354-82a5j2dlq3l6edrc4cvd5to81sqgt8h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ripbull.eRTC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080757391354:android:0446a1d063b706633c1e43",
+        "android_client_info": {
+          "package_name": "com.ripbull.ertc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWb4WBzA8EE67qeIj3Gu3ZgVwUfAIMVrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1080757391354-82a5j2dlq3l6edrc4cvd5to81sqgt8h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ripbull.eRTC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080757391354:android:0de1a576d204a9b63c1e43",
+        "android_client_info": {
+          "package_name": "com.ripbull.ertc.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWb4WBzA8EE67qeIj3Gu3ZgVwUfAIMVrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1080757391354-82a5j2dlq3l6edrc4cvd5to81sqgt8h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ripbull.eRTC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080757391354:android:272e2488821ecde23c1e43",
+        "android_client_info": {
+          "package_name": "com.ripbull.ertc.stage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWb4WBzA8EE67qeIj3Gu3ZgVwUfAIMVrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080757391354-b743jqi7ke26gri0hs5ji1vg9ndaobo4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1080757391354-82a5j2dlq3l6edrc4cvd5to81sqgt8h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ripbull.eRTC"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

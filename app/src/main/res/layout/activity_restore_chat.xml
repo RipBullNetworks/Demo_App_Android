@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/namespace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_background_color"
+    tools:context=".restore.RestoreChatActivity"
+    >
+
+  <include layout="@layout/all_toolbar_dark" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivChatBackup"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/dp36"
+      android:layout_marginTop="@dimen/backup_screen_top_margin"
+      android:layout_marginEnd="@dimen/dp36"
+      android:src="@drawable/ic_chat_backup"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      />
+  <com.ripbull.ertc.components.CustomHorizontalProgressBar
+      android:id="@+id/progress"
+      app:layout_constraintTop_toBottomOf="@+id/ivChatBackup"
+      android:layout_width="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="@dimen/dp30"
+      android:layout_height="wrap_content"
+      android:layout_margin="30dp"
+      app:count="5"
+      android:visibility="visible"
+      app:timeout="300" />
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvBackupTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp30"
+      android:layout_marginEnd="@dimen/dp36"
+      android:fontFamily="@font/sf_pro_display_bold"
+      android:text="@string/backup_message_found"
+      android:textColor="@color/backup_message_title_color"
+      android:textSize="@dimen/sp18"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/progress"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvBackupDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp10"
+      android:layout_marginEnd="@dimen/dp36"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:text="@string/backup_message_description"
+      android:textColor="@color/backup_message_title_color"
+      android:textSize="@dimen/sp14"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvBackupTitle"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnRestore"
+      style="@style/Widget.App.Button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="36dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginRight="36dp"
+      android:layout_marginBottom="@dimen/dp20"
+      android:text="@string/restore"
+      app:layout_constraintBottom_toTopOf="@+id/btnSkip"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnSkip"
+      style="@style/disable_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="36dp"
+      android:layout_marginRight="36dp"
+      android:layout_marginBottom="@dimen/dp100"
+      android:text="@string/skip_restore"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

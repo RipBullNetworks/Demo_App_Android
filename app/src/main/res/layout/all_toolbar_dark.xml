@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentInsetEnd="0dp"
+    android:contentInsetLeft="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetStart="0dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetEndWithActions="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp"
+    app:titleTextAppearance="@style/AppTheme.Toolbar.Dark.Title"
+    tools:menu="@menu/chat_menu"
+    style="@style/AppTheme.Toolbar.Dark"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlToolbar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      >
+
+    <com.ripbull.ertc.components.CircleImageView
+        android:id="@+id/imgToolbarDP"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chat_user_default"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/dp5"
+        android:layout_toRightOf="@+id/imgToolbarDP">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/toolbar_text_padding"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/chat_title_color"
+        android:textSize="@dimen/textsize_toolbardark_title"
+        android:fontFamily="@font/sf_pro_display_medium"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/toolbar_text_padding"
+        android:layout_below="@+id/tvTitle"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/chat_title_color"
+        android:textSize="@dimen/textsize_toolbardark_sub_title"
+        android:fontFamily="@font/sf_pro_display_regular"
+        />
+    </RelativeLayout>
+  </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

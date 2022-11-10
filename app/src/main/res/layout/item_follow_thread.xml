@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/chat_history_item_padding"
+    >
+
+  <com.ripbull.ertc.components.CircleImageView
+      android:id="@+id/ivUserProfile"
+      android:layout_width="@dimen/dp48"
+      android:layout_height="@dimen/dp48"
+      android:cropToPadding="true"
+      android:src="@drawable/ic_chat_user_default"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/recycler_view_item_margin"
+      android:layout_marginEnd="@dimen/recycler_view_item_margin"
+      android:ellipsize="end"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:maxLines="1"
+      android:maxLength="35"
+      android:textColor="@color/chat_user_name_color"
+      android:textSize="@dimen/chat_item_title_size"
+      app:layout_constraintStart_toEndOf="@id/ivUserProfile"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="@tools:sample/full_names"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvParticipants"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/recycler_view_item_margin"
+      android:ellipsize="end"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:maxLines="1"
+      android:maxLength="50"
+      android:textColor="@color/chat_user_message_color"
+      android:textSize="@dimen/chat_item_subtitle_size"
+      app:layout_constraintHorizontal_chainStyle="packed"
+      app:layout_constraintStart_toEndOf="@id/ivUserProfile"
+      app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+      tools:text="@tools:sample/full_names"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivThreadOption"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp5"
+      android:src="@drawable/ic_thread_option"
+      app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvParticipants"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvReplies"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp10"
+      android:background="@drawable/thread_box_bg"
+      android:overScrollMode="never"
+      android:padding="@dimen/dp10"
+      android:scrollbarStyle="outsideOverlay"
+      android:stackFromBottom="false"
+      android:transcriptMode="normal"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/ivUserProfile"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnReply"
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_marginTop="@dimen/dp10"
+      android:background="@drawable/white_button_bg"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:paddingStart="@dimen/dp25"
+      android:paddingTop="@dimen/dp5"
+      android:paddingEnd="@dimen/dp25"
+      android:paddingBottom="@dimen/dp5"
+      android:text="@string/thread_reply"
+      android:visibility="gone"
+      android:textColor="@color/channel_text_blue_color"
+      android:textSize="@dimen/sp16"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rvReplies"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

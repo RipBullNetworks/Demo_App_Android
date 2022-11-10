@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+      android:id="@+id/action_thread_attachment"
+      android:icon="@drawable/ic_attachment_menu"
+      android:title="@string/menu_attachment"
+      app:contentDescription="@string/menu_attachment"
+      app:showAsAction="ifRoom"/>
+
+  <item
+      android:id="@+id/action_more"
+      android:icon="@drawable/ic_action_more"
+      android:title=""
+      app:showAsAction="always">
+
+    <menu>
+      <item
+          android:id="@+id/action_starred_messages"
+          android:title="@string/title_starred_messages"
+          android:icon="@drawable/ic_stat_message_menu"
+          app:contentDescription="@string/title_starred_messages"/>
+    </menu>
+  </item>
+
+</menu>

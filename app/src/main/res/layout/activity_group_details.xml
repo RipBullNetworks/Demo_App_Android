@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_background_color"
+    android:fitsSystemWindows="true"
+    >
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/nsvContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chat_background_color"
+        >
+
+      <include
+          layout="@layout/all_toolbar_dark"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivUserProfile"
+          android:layout_width="match_parent"
+          android:layout_height="256dp"
+          android:background="@color/colorPrimary"
+          android:fitsSystemWindows="true"
+          android:scaleType="centerCrop"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/toolbar"
+          app:srcCompat="@drawable/ic_group"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/group_screen_bg"
+          android:orientation="vertical"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/ivUserProfile"
+          >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingTop="@dimen/dp10"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChannelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:textColor="@color/card_view_title"
+            android:textSize="@dimen/sp14"
+            tools:text="Channel Name"
+            android:fontFamily="@font/sf_pro_display_regular"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            >
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tvTagDesc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/desc"
+              android:textColor="@color/card_view_tag"
+              android:textSize="@dimen/sp12"
+              android:fontFamily="@font/sf_pro_display_regular"
+              />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tvDesc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tvTagDesc"
+              android:paddingTop="@dimen/dp5"
+              android:textColor="@color/card_view_title"
+              android:textSize="@dimen/sp14"
+              android:fontFamily="@font/sf_pro_display_regular"
+              />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_privacy"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingTop="@dimen/dp10"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGroupType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:textColor="@color/card_view_title"
+            android:textSize="@dimen/sp14"
+            tools:text="Public Channel"
+            android:fontFamily="@font/sf_pro_display_regular"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotificationSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/card_view_title"
+            android:drawableLeft="@drawable/ic_notification"
+            android:textSize="@dimen/sp14"
+            android:padding="@dimen/dp20"
+            android:layout_gravity="start"
+            android:drawablePadding="@dimen/dp20"
+            android:text="@string/notification_settings"
+            android:fontFamily="@font/sf_pro_display_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10">
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dp10"
+              android:text="@string/participants"
+              android:textColor="@color/card_view_tag"
+              android:textSize="@dimen/sp16"
+              android:layout_alignParentStart="true"
+              android:fontFamily="@font/sf_pro_display_medium"
+              />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tvViewAll"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dp10"
+              android:text="@string/all"
+              android:textColor="@color/tv_button_color"
+              android:textSize="@dimen/sp16"
+              android:drawableEnd="@drawable/ic_view_all"
+              android:layout_centerVertical="true"
+              android:gravity="center_vertical"
+              android:drawablePadding="@dimen/dp10"
+              android:layout_alignParentEnd="true"
+              android:fontFamily="@font/sf_pro_display_medium"
+              />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddParticipants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTagDesc"
+            android:drawableStart="@drawable/ic_add_participants"
+            android:drawablePadding="@dimen/dp15"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/add_participants"
+            android:textColor="@color/add_participant_color"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGroupUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            tools:listitem="@layout/item_user_list"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10">
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dp10"
+              android:text="@string/image_library"
+              android:textColor="@color/card_view_tag"
+              android:textSize="@dimen/sp16"
+              android:layout_alignParentStart="true"
+              android:fontFamily="@font/sf_pro_display_medium"
+              />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tvViewGallery"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dp10"
+              android:text="@string/all"
+              android:textColor="@color/tv_button_color"
+              android:textSize="@dimen/sp16"
+              android:drawableEnd="@drawable/ic_view_all"
+              android:gravity="center_vertical"
+              android:drawablePadding="@dimen/dp10"
+              android:layout_alignParentEnd="true"
+              android:fontFamily="@font/sf_pro_display_medium"
+              />
+
+          <GridView
+              android:id="@+id/gridView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:columnWidth="90dp"
+              android:gravity="center"
+              android:padding="@dimen/dp2"
+              android:layout_marginTop="@dimen/dp5"
+              android:layout_below="@+id/tvViewGallery"
+              android:numColumns="auto_fit"
+              android:scrollbars="horizontal"
+              android:stretchMode="columnWidth"
+              tools:listitem="@layout/item_gallery"
+              />
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/tvNoMedia"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:text="@string/no_media"
+              android:layout_margin="@dimen/dp5"
+              android:textColor="@color/chat_user_name_color"
+              android:textSize="@dimen/no_chat_title_size"
+              android:fontFamily="@font/sf_pro_display_regular"
+              android:layout_below="@+id/tvViewGallery"
+              android:visibility="gone"
+              />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exitGroup"
+            android:text="@string/exit_group"
+            android:textColor="@color/group_exit_color"
+            android:textSize="@dimen/sp16"
+            android:padding="@dimen/dp20"
+            android:drawablePadding="@dimen/dp20"
+            android:drawableLeft="@drawable/ic_exit_group"
+            android:fontFamily="@font/sf_pro_display_regular"
+            />
+      </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

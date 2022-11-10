@@ -1,0 +1,43 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ripbull.coresdk"
+4    android:versionCode="1"
+5    android:versionName="1.0-dev" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:4:3-77
+11-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:4:20-74
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:5:3-65
+12-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:5:20-63
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+13-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:6:3-75
+13-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:6:20-72
+14
+15    <application>
+15-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:8:3-18:17
+16        <service
+16-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:9:5-12:68
+17            android:name="com.ripbull.coresdk.offline.OfflineMessageService"
+17-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:10:9-54
+18            android:exported="false"
+18-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:11:9-33
+19            android:permission="android.permission.BIND_JOB_SERVICE" />
+19-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:12:9-65
+20
+21        <receiver
+21-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:14:5-17:16
+22            android:name="com.ripbull.coresdk.fcm.NotificationBroadcastReceiver"
+22-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:15:9-58
+23            android:exported="false" >
+23-->/Volumes/Work/Github/Rip Bull/Dev/Android/ripbull-chat-sdk/src/main/AndroidManifest.xml:16:9-33
+24        </receiver>
+25    </application>
+26
+27</manifest>

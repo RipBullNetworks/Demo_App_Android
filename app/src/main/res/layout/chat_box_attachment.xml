@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlAttachment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="invisible"
+    tools:visibility="visible"
+    >
+
+  <View
+      android:id="@+id/attacheDummyView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentTop="true"
+      />
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="180dp"
+      android:layout_alignParentBottom="true"
+      android:animateLayoutChanges="true"
+      android:gravity="bottom"
+      app:cardUseCompatPadding="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp10"
+        >
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareImage"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_image_attachment"
+          android:text="@string/attachment_image_title"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toStartOf="@+id/shareVideo"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareVideo"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_video_attachment"
+          android:text="@string/attachment_video_title"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toStartOf="@+id/shareAudio"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/shareImage"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareAudio"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_audio_attachment"
+          android:text="@string/attachment_audio_title"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/shareVideo"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareContact"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_contacts_attachment"
+          android:text="@string/attachment_contacts_title"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toStartOf="@+id/shareLocation"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/shareImage"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareLocation"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_location_attachment"
+          android:text="@string/attachment_location_title"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toStartOf="@+id/shareGIF"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/shareContact"
+          app:layout_constraintTop_toBottomOf="@+id/shareImage"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareDocument"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_doc_attachment"
+          android:text="@string/attachment_document_title"
+          android:visibility="gone"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toStartOf="@+id/shareGIF"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/shareLocation"
+          app:layout_constraintTop_toBottomOf="@+id/shareImage"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/shareGIF"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:drawablePadding="5dp"
+          android:drawableTop="@drawable/ic_gif_attachment"
+          android:text="@string/attachment_gif_title"
+          android:textAlignment="center"
+          android:textSize="@dimen/sp12"
+          android:textColor="@color/attachment_text_color"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/shareLocation"
+          app:layout_constraintTop_toBottomOf="@+id/shareImage"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintVertical_bias="0.5"
+          />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+int string connection_connected_to 0x0
+int string connection_connecting_to 0x0
+int string connection_disconnected_from 0x0
+int string connection_disconnecting_from 0x0
+int string connection_error_connecting_to 0x0
+int string connection_unknown_status 0x0

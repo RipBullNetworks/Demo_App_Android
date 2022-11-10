@@ -1,0 +1,25 @@
+import dependencies.*
+
+apply from: Deps.common
+
+dependencies {
+  implementation Deps.Gms.play_services_places
+  implementation Deps.Gms.play_services_location
+  implementation Deps.AndroidXLibs.materialDesign
+  implementation Deps.RxJava.rxAndroid
+  implementation Deps.AndroidXLibs.archRuntime
+
+  //Retrofit
+  implementation Deps.Retrofit2.retrofit
+  implementation Deps.OkHttp3.okHttp3
+
+  //Emoji
+  implementation Deps.AndroidXLibs.emoji
+  implementation Deps.AndroidXLibs.constraintlayout
+  implementation Deps.AndroidXLibs.appCompat
+
+  //Image/Video Compressor
+  implementation Deps.Compressor.mp4Parser
+  implementation Deps.Compressor.coroutinesCore
+  implementation Deps.Compressor.coroutinesAndroid
+}

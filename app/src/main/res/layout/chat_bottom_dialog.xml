@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_dialog_bg"
+    android:padding="@dimen/dp10"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvDelete"
+      android:drawableStart="@drawable/ic_delete"
+      android:text="@string/deleteMessage"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvEdit"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvEdit"
+      android:drawableStart="@drawable/edit"
+      android:text="@string/editMessage"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvCopy"
+      style="@style/chat_bottom_dialog"
+      android:drawableStart="@drawable/ic_copy"
+      android:text="@string/copy"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvDelete"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvAddToFav"
+      android:drawableStart="@drawable/ic_add_fav"
+      android:text="@string/add_fav"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvCopy"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvReaction"
+      android:drawableStart="@drawable/ic_smile"
+      android:hint="@string/reaction"
+      android:textColorHint="@color/bottom_sheet_text_color"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvAddToFav"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvForward"
+      android:drawableStart="@drawable/ic_forward"
+      android:hint="@string/forward"
+      android:textColorHint="@color/bottom_sheet_text_color"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvReaction"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvStartThread"
+      android:drawableStart="@drawable/ic_thread"
+      android:text="@string/start_thread"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvForward"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvFollowThread"
+      android:drawableStart="@drawable/ic_follow_thread"
+      android:text="@string/follow_thread"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvStartThread"
+      style="@style/chat_bottom_dialog"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvReportMessage"
+      android:drawableStart="@drawable/ic_report_message"
+      android:text="@string/report_message"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvFollowThread"
+      android:visibility="gone"
+      style="@style/chat_bottom_dialog"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

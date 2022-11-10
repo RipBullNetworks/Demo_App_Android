@@ -1,0 +1,50 @@
+import dependencies.*
+
+apply plugin: 'com.android.library'
+//apply from: '../jacoco.gradle'
+
+apply from: Deps.dependency
+
+android {
+  compileSdkVersion Version.compileSdk
+
+  defaultConfig {
+    minSdkVersion Version.minSdk
+    targetSdkVersion Version.targetSdk
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    automationTest {
+      initWith(buildTypes.debug)
+      testCoverageEnabled = true
+    }
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+  }
+
+  flavorDimensions "default"
+  productFlavors {
+    stage {
+      dimension "default"
+    }
+    qa {
+      dimension "default"
+    }
+    prod {
+      dimension "default"
+    }
+    dev {
+      dimension "default"
+    }
+  }
+}

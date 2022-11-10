@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittext_white_background"
+    android:paddingTop="@dimen/dp24"
+    android:paddingStart="@dimen/dp24"
+    android:paddingEnd="@dimen/dp24"
+    android:paddingBottom="@dimen/dp5"
+    >
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvAlert"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:text="@string/logout_message"
+      android:textColor="@color/white_edit_text"
+      android:textSize="@dimen/sp16"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnLogout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvAlert"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="@dimen/dp15"
+      android:background="@null"
+      android:fontFamily="@font/sf_pro_display_bold"
+      android:text="@string/logout"
+      android:textColor="@color/group_exit_color"
+      android:textSize="@dimen/sp14"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnCancel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvAlert"
+      android:layout_marginTop="@dimen/dp15"
+      android:layout_marginRight="@dimen/dp24"
+      android:layout_toLeftOf="@+id/btnLogout"
+      android:background="@null"
+      android:fontFamily="@font/sf_pro_display_bold"
+      android:text="@string/cancel"
+      android:textColor="@color/dialog_btn_cancel"
+      android:textSize="@dimen/sp14"
+      />
+</RelativeLayout>

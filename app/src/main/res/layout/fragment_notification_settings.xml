@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_background_color"
+    >
+
+  <include layout="@layout/all_toolbar_dark" />
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/nsvContainer"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginBottom="@dimen/dp10"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      app:layout_constraintBottom_toTopOf="@+id/btnUpdateSettings"
+      >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chat_background_color"
+        >
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvNoInternet"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:overScrollMode="never"
+          android:padding="@dimen/dp10"
+          android:textColor="@color/txt_alert_info"
+          android:background="@color/alert_info_bg"
+          android:text="@string/txt_no_internet"
+          android:drawableLeft="@drawable/ic_no_internet"
+          android:textSize="@dimen/sp16"
+          android:visibility="gone"
+          android:drawablePadding="@dimen/dp15"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvNotification"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dp12"
+          android:layout_marginTop="@dimen/dp10"
+          android:layout_marginRight="@dimen/dp12"
+          android:fontFamily="@font/sf_pro_display_semi_bold"
+          android:padding="@dimen/dp10"
+          android:text="@string/notification_level"
+          android:textColor="@color/email_text_color"
+          android:textSize="@dimen/sp16"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvNoInternet"
+          />
+
+      <RadioGroup
+          android:id="@+id/rgMuteSettings"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginLeft="@dimen/dp12"
+          android:layout_marginRight="@dimen/dp12"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvNotification"
+          >
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbAll"
+            style="@style/mute_radio_button_style"
+            android:checked="true"
+            android:text="@string/every_new_message"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbMention"
+            style="@style/mute_radio_button_style"
+            android:text="@string/just_mentions"
+            />
+
+        <View
+            android:id="@+id/mentionDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbNone"
+            style="@style/mute_radio_button_style"
+            android:text="@string/nothing"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+      </RadioGroup>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvApplyFor"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dp12"
+          android:layout_marginTop="@dimen/dp10"
+          android:layout_marginRight="@dimen/dp12"
+          android:fontFamily="@font/sf_pro_display_semi_bold"
+          android:padding="@dimen/dp10"
+          android:text="@string/apply_setting"
+          android:textColor="@color/email_text_color"
+          android:textSize="@dimen/sp16"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/rgMuteSettings"
+          />
+
+      <RadioGroup
+          android:id="@+id/rgSettingsFor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginLeft="@dimen/dp12"
+          android:layout_marginRight="@dimen/dp12"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvApplyFor"
+          >
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbAlways"
+            style="@style/mute_radio_button_style"
+            android:checked="true"
+            android:text="@string/always"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb24Hours"
+            style="@style/mute_radio_button_style"
+            android:text="@string/hours_24"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv24Hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingStart="@dimen/mute_setting_box_margin"
+            android:paddingEnd="@dimen/mute_setting_box_margin"
+            android:paddingBottom="@dimen/mute_setting_box_margin"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            tools:text="22 h remaining"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb72Hours"
+            style="@style/mute_radio_button_style"
+            android:text="@string/hours_72"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv72Hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingStart="@dimen/mute_setting_box_margin"
+            android:paddingEnd="@dimen/mute_setting_box_margin"
+            android:paddingBottom="@dimen/mute_setting_box_margin"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            tools:text="22 h remaining"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb1Week"
+            style="@style/mute_radio_button_style"
+            android:text="@string/week_1"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv1Week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingStart="@dimen/mute_setting_box_margin"
+            android:paddingEnd="@dimen/mute_setting_box_margin"
+            android:paddingBottom="@dimen/mute_setting_box_margin"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            tools:text="22 h remaining"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb2Weeks"
+            style="@style/mute_radio_button_style"
+            android:text="@string/weeks_2"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv2Weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingStart="@dimen/mute_setting_box_margin"
+            android:paddingEnd="@dimen/mute_setting_box_margin"
+            android:paddingBottom="@dimen/mute_setting_box_margin"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            tools:text="22 h remaining"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb1Month"
+            style="@style/mute_radio_button_style"
+            android:text="@string/month_1"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv1Month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingStart="@dimen/mute_setting_box_margin"
+            android:paddingEnd="@dimen/mute_setting_box_margin"
+            android:paddingBottom="@dimen/mute_setting_box_margin"
+            android:textColor="@color/card_view_tag"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            tools:text="22 h remaining"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider"
+            />
+      </RadioGroup>
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvSettingInfo"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dp12"
+          android:layout_marginTop="@dimen/dp10"
+          android:layout_marginRight="@dimen/dp12"
+          android:fontFamily="@font/sf_pro_display_regular"
+          android:padding="@dimen/dp15"
+          android:drawablePadding="@dimen/dp10"
+          android:textColor="@color/info_color"
+          android:textSize="@dimen/sp16"
+          android:background="@color/info_bg_color"
+          android:drawableStart="@drawable/ic_info_blue"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/rgSettingsFor"
+          tools:text="Note that after 24 hours the notification settings will be reset to allow all."
+          />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnUpdateSettings"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:layout_marginLeft="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp10"
+      android:layout_marginRight="@dimen/dp36"
+      android:layout_marginBottom="@dimen/dp10"
+      android:background="@drawable/blue_button_bg"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:letterSpacing="0.025"
+      android:padding="@dimen/dp12"
+      android:text="@string/update"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sp16"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

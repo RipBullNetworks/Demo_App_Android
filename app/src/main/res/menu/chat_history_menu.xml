@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+      android:id="@+id/action_search"
+      android:icon="@drawable/ic_search_toolbar"
+      android:title="@string/menu_search"
+      android:contentDescription="@string/menu_search"
+      app:showAsAction="always"/>
+
+  <item
+      android:id="@+id/action_more"
+      android:icon="@drawable/ic_create_channel"
+      android:title=""
+      app:showAsAction="always">
+
+    <menu>
+      <item
+          android:id="@+id/action_channel"
+          android:title="@string/channels"
+          app:contentDescription="@string/channels"
+          android:icon="@drawable/ic_channel"/>
+
+      <item
+          android:id="@+id/action_create_channel"
+          android:title="@string/create_group"
+          app:contentDescription="@string/create_group"
+          android:icon="@drawable/icon_create_channel"/>
+
+      <item
+          android:id="@+id/action_search_channel"
+          android:title="@string/browse_channel"
+          app:contentDescription="@string/browse_channel"
+          android:icon="@drawable/ic_browse_channel"/>
+    </menu>
+  </item>
+</menu>

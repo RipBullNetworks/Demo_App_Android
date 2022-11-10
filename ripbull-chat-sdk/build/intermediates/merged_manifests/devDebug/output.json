@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "applicationId": "com.ripbull.coresdk",
+  "variantType": "LIBRARY",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "1.0-dev",
+        "outputFile": "ripbull-chat-sdk-dev-debug.aar",
+        "fullName": "devDebug",
+        "baseName": "dev-debug",
+        "dirName": ""
+      },
+      "path": "../../library_manifest/devDebug/AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.ripbull.coresdk",
+        "split": ""
+      }
+    }
+  ]
+}

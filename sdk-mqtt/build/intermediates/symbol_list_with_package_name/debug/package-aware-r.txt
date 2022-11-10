@@ -1,0 +1,7 @@
+com.ripbull.ertc.mqtt
+string connection_connected_to
+string connection_connecting_to
+string connection_disconnected_from
+string connection_disconnecting_from
+string connection_error_connecting_to
+string connection_unknown_status

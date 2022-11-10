@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+  <com.ripbull.ertc.components.RoundedImageView
+      android:id="@+id/ivMediaGallery"
+      android:layout_width="150dp"
+      android:layout_height="110dp"
+      android:layout_centerInParent="true"
+      android:adjustViewBounds="true"
+      android:padding="2dp"
+      app:cornerRadius="@dimen/chat_rounded_corner"
+      app:roundedCorners="all"
+      app:srcCompat="@drawable/logo"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivPlayVideo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:layout_centerInParent="true"
+      app:srcCompat="@drawable/ic_play_music"
+      />
+</RelativeLayout>

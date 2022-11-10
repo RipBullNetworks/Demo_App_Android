@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  
+  <item
+      android:id="@+id/action_mute_notification"
+      android:title="@string/manage_notification"
+      android:icon="@drawable/ic_mute_notification_menu"
+      app:contentDescription="@string/manage_notification"/>
+
+  <item
+      android:id="@+id/action_add_participants"
+      android:title="@string/add_members"
+      android:icon="@drawable/ic_add_participant"
+      app:contentDescription="@string/add_members"/>
+
+  <item
+      android:id="@+id/action_clear_chat"
+      android:title="@string/title_clear_chat"
+      android:icon="@drawable/ic_clear_chat_history"
+      app:contentDescription="@string/title_clear_chat"/>
+
+  <item
+      android:id="@+id/action_leave_channel"
+      android:title="@string/title_leave_channel"
+      android:icon="@drawable/ic_leave_channel"
+      app:contentDescription="@string/title_leave_channel"/>
+</menu>

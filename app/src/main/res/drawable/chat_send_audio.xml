@@ -1,0 +1,15 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"   >
+
+  <solid
+      android:color="@color/chat_send_audio_bg" >
+  </solid>
+
+  <corners
+      android:topLeftRadius="@dimen/chat_rounded_corner"
+      android:topRightRadius="@dimen/chat_rounded_corner"
+      android:bottomRightRadius="@dimen/chat_rounded_corner"
+      android:bottomLeftRadius="@dimen/chat_rounded_corner"/>
+
+</shape>

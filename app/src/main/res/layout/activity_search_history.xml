@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <include
+      layout="@layout/all_toolbar_dark"
+      app:layout_constraintBottom_toTopOf="@+id/rvSearchHistory"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvSearchHistory"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      tools:listitem="@layout/item_chat_history"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvNoMessages"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/empty_list_msg_margin"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:gravity="center"
+      android:text="@string/no_search"
+      android:textColor="@color/chat_item_title_color"
+      android:textSize="@dimen/no_chat_title_size"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      tools:ignore="MissingConstraints"
+      />
+
+  <LinearLayout
+      android:id="@+id/llSearch"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp10"
+      android:orientation="vertical"
+      android:padding="@dimen/dp20"
+      android:visibility="gone"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRecentSearches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:gravity="center"
+        android:text="@string/recent_searches"
+        android:textColor="@color/card_view_tag"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/chat_item_title_color"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/chat_item_title_color"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearch3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/chat_item_title_color"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearch4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/chat_item_title_color"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSearch5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:textColor="@color/chat_item_title_color"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvClearHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp30"
+        android:fontFamily="@font/sf_pro_display_semi_bold"
+        android:text="@string/clear_history"
+        android:textColor="@color/chat_item_title_color"
+        android:textSize="@dimen/no_chat_title_size"
+        tools:ignore="MissingConstraints"
+        />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

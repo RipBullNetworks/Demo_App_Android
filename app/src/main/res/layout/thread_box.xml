@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlThreadBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:visibility="gone"
+    >
+
+  <View
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:background="@drawable/divider"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvThreadTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/start_thread"
+      android:textSize="@dimen/sp14"
+      android:layout_below="@+id/view"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:layout_marginTop="@dimen/dp10"
+      android:layout_marginBottom="@dimen/dp5"
+      android:layout_centerInParent="true"
+      android:layout_centerVertical="true"
+      android:textColor="@color/card_view_tag"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivAddFav"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp5"
+      android:visibility="gone"
+      android:layout_marginRight="@dimen/dp5"
+      android:layout_alignParentEnd="true"
+      app:srcCompat="@drawable/ic_add_fav"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivCopy"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp5"
+      android:visibility="gone"
+      android:layout_marginRight="@dimen/dp10"
+      android:layout_toLeftOf="@+id/ivAddFav"
+      app:srcCompat="@drawable/ic_copy"
+      />
+</RelativeLayout>

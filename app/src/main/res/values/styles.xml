@@ -1,0 +1,372 @@
+<resources>
+
+
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:statusBarColor">@color/status_bar</item>
+    <item name="colorControlNormal">@color/white</item>
+    <item name="android:windowBackground">@color/white</item>
+
+    <item name="textAppearanceHeadline1">@style/TextAppearance.App.Headline1</item>
+    <item name="textAppearanceHeadline2">@style/TextAppearance.App.Headline2</item>
+    <item name="textAppearanceHeadline3">@style/TextAppearance.App.Headline3</item>
+    <item name="textAppearanceHeadline4">@style/TextAppearance.App.Headline4</item>
+    <item name="textAppearanceHeadline5">@style/TextAppearance.App.Headline5</item>
+    <item name="textAppearanceHeadline6">@style/TextAppearance.App.Headline6</item>
+    <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Headline1</item>
+    <item name="textAppearanceSubtitle2">@style/TextAppearance.App.Headline1</item>
+    <item name="textAppearanceBody1">@style/TextAppearance.App.Body1</item>
+    <item name="textAppearanceBody2">@style/TextAppearance.App.Body2</item>
+    <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
+    <item name="textAppearanceButton">@style/TextAppearance.App.Button</item>
+    <item name="textAppearanceOverline">@style/TextAppearance.App.Overline</item>"
+
+    <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+    <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+  </style>
+
+  <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+  </style>
+
+  <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+    <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionModeOverlay">true</item>
+    <item name="actionModeCloseDrawable">@drawable/ic_back_toolbar</item>
+    <item name="actionModeStyle">@style/ActionModeStyle</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="ActionModeStyle" parent="@style/Widget.AppCompat.ActionMode">
+    <item name="background">@drawable/gradient_all_toolbar_dark</item>
+    <item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
+  </style>
+
+  <style name="transparent_theme">
+    <item name="colorControlHighlight">@android:color/transparent</item>
+    <item name="colorControlActivated">@android:color/transparent</item>
+  </style>
+
+  <style name="ActionModeTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="Widget.App.Button" parent="@style/Widget.AppCompat.Button.Colored">
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+    <item name="android:background">@drawable/all_button_background</item>
+    <item name="android:letterSpacing">0.025</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:paddingLeft">24dp</item>
+    <item name="android:paddingRight">24dp</item>
+    <item name="android:paddingTop">12dp</item>
+    <item name="android:paddingBottom">12dp</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+
+  <style name="Widget.App.EditText" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox">
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:paddingLeft">14dp</item>
+    <item name="android:paddingRight">14dp</item>
+    <item name="android:paddingTop">12dp</item>
+    <item name="android:paddingBottom">12dp</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textColorHint">@color/edit_hint</item>
+    <item name="android:cursorVisible">true</item>
+  </style>
+
+  <style name="Widget.App.TextView.Title" parent="@style/TextAppearance.AppCompat.Title">
+    <item name="android:textSize">16sp</item>
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+  <style name="TextAppearance.App.Body" parent="@style/TextAppearance.MaterialComponents.Body1">
+    <item name="android:textColor">?android:textColorSecondary</item>
+  </style>
+
+  <style name="TextAppearance.App.Headline" parent="@style/TextAppearance.MaterialComponents.Headline1">
+    <item name="android:textColor">?android:textColorSecondary</item>
+  </style>
+
+  <style name="TextAppearance.App.Subtitle" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+    <item name="android:textColor">?android:textColorSecondary</item>
+  </style>
+
+  <style name="Widget.App.BottomNav" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+    <item name="itemIconTint">@color/bottom_nav_item</item>
+    <item name="itemTextAppearanceActive">@style/TextAppearance.App.BottomNavigationView.Active
+    </item>
+    <item name="itemTextAppearanceInactive">@style/TextAppearance.App.BottomNavigationView</item>
+    <item name="labelVisibilityMode">selected</item>
+    <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark</item>
+  </style>
+
+  <style name="TextAppearance.App.BottomNavigationView" parent="@style/TextAppearance.MaterialComponents.Body1">
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    <item name="android:textColor">@color/bottom_nav_item</item>
+    <item name="android:textSize">12sp</item>
+  </style>
+
+  <style name="TextAppearance.App.BottomNavigationView.Active">
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    <item name="android:textColor">@color/white_text_color</item>
+    <item name="android:textSize">12sp</item>
+  </style>
+
+  <style name="iv_all_userprofile" parent="">
+    <item name="android:height">64dp</item>
+    <item name="android:width">64dp</item>
+  </style>
+
+  <style name="AppTheme.Toolbar.Dark.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+    <item name="android:textColor">@color/newWhite</item>
+    <item name="android:ellipsize">marquee</item>
+    <item name="android:scrollHorizontally">true</item>
+    <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    <item name="android:focusableInTouchMode">true</item>
+    <item name="android:focusable">true</item>
+    <item name="fontFamily">@font/sf_pro_display_medium</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:freezesText">true</item>
+    <item name="android:textSize">@dimen/textsize_toolbardark_title</item>
+  </style>
+
+  <style name="AppTheme.Toolbar.Dark" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    <item name="android:background">@drawable/gradient_all_toolbar_dark</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+    <item name="titleTextAppearance">@style/AppTheme.Toolbar.Dark.Title</item>
+    <item name="popupTheme">@style/AppTheme.Toolbar.Dark.Popup</item>
+  </style>
+
+  <style name="AppTheme.Toolbar.Dark.Popup" parent="ThemeOverlay.MaterialComponents.Light">
+  </style>
+
+  <style name="chat_box_icon">
+    <item name="android:layout_width">@dimen/chat_box_icon_size</item>
+    <item name="android:layout_height">@dimen/chat_box_icon_size</item>
+    <item name="android:padding">@dimen/chat_box_icon_padding</item>
+    <item name="android:scaleType">centerInside</item>
+  </style>
+
+  <style name="chat_incoming_timings">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/chat_timestamp_size</item>
+    <item name="android:textColor">@color/time_stamp_color</item>
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    <item name="android:paddingStart">@dimen/chat_time_text_padding</item>
+    <item name="android:paddingTop">@dimen/chat_time_text_padding</item>
+    <item name="android:paddingEnd">@dimen/chat_time_text_padding</item>
+  </style>
+
+  <style name="chat_outgoing_timings">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/chat_timestamp_size</item>
+    <item name="android:textColor">@color/time_stamp_color</item>
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    <item name="android:paddingStart">@dimen/chat_time_text_padding</item>
+    <item name="android:paddingTop">@dimen/chat_time_text_padding</item>
+    <item name="android:paddingEnd">@dimen/chat_time_text_padding</item>
+  </style>
+
+  <style name="AttachmentType">
+    <item name="android:textColor">#ff999999</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+  </style>
+
+  <style name="chat_send_background_layout">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">12dp</item>
+    <item name="android:background">@drawable/chat_send_rounded</item>
+    <item name="android:maxWidth">300dp</item>
+    <item name="android:layout_marginBottom">20dp</item>
+  </style>
+
+  <style name="chat_receive_background_layout">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">12dp</item>
+    <item name="android:background">@drawable/chat_receive_rounded</item>
+    <item name="android:maxWidth">300dp</item>
+  </style>
+
+  <style name="ProgressBarRedAccent">
+    <item name="colorAccent">@color/colorAccent</item> <!-- Whatever color you want-->
+  </style>
+
+  <style name="chat_send_text_status_image">
+    <item name="android:layout_width">10dp</item>
+    <item name="android:layout_height">10dp</item>
+    <item name="android:layout_marginTop">8dp</item>
+  </style>
+
+  <style name="chat_time_text_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingStart">@dimen/chat_time_text_padding</item>
+    <item name="android:paddingTop">@dimen/chat_time_text_padding</item>
+    <item name="android:paddingEnd">@dimen/chat_time_text_padding</item>
+    <item name="android:textSize">@dimen/chat_timestamp_size</item>
+    <item name="android:textColor">@color/time_stamp_color</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+  </style>
+
+  <style name="ProgressBarWhiteAccent">
+    <item name="colorAccent">@color/white</item> <!-- Whatever color you want-->
+  </style>
+
+  <style name="ProgressBarGreyAccent">
+    <item name="colorAccent">@color/received_audio_color</item> <!-- Whatever color you want-->
+  </style>
+
+  <style name="chat_audio_image">
+    <item name="android:layout_width">@dimen/chat_audio_box</item>
+    <item name="android:layout_height">@dimen/chat_audio_box</item>
+  </style>
+
+  // Change Password Edit Text
+  <style name="Widget.App.White.EditText" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox">
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:paddingLeft">14dp</item>
+    <item name="android:paddingRight">14dp</item>
+    <item name="android:paddingTop">12dp</item>
+    <item name="android:paddingBottom">12dp</item>
+    <item name="android:textColor">@color/white_edit_text</item>
+    <item name="android:textColorHint">@color/white_edit_hint</item>
+    <item name="android:cursorVisible">true</item>
+  </style>
+
+  <style name="chat_contact_image">
+    <item name="android:layout_width">@dimen/chat_contact_dp</item>
+    <item name="android:layout_height">@dimen/chat_contact_dp</item>
+  </style>
+
+  //BottomSheetDialog style
+  <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+  </style>
+
+  <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="thread_count_background_layout">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">5dp</item>
+    <item name="android:background">@drawable/thread_count_bg</item>
+    <item name="android:maxWidth">300dp</item>
+  </style>
+
+  <style name="thread_count_text_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:paddingStart">@dimen/thread_box_padding</item>
+    <item name="android:paddingEnd">@dimen/thread_box_padding</item>
+    <item name="android:textSize">@dimen/thread_count_text_size</item>
+    <item name="android:textColor">@color/view_replies_color</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  //Load Testing
+  <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+    <item name="android:textStyle">italic</item>
+    <item name="android:background">#79ACD6</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:textColor">#FFFFFF</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="mute_radio_button_style">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">start</item>
+    <item name="android:layoutDirection">rtl</item>
+    <item name="android:button">@drawable/notification_radio_btn</item>
+    <item name="android:layout_marginRight">@dimen/mute_setting_box_margin</item>
+    <item name="android:paddingTop">@dimen/mute_setting_box_margin</item>
+    <item name="android:paddingBottom">@dimen/mute_setting_box_margin</item>
+    <item name="android:paddingStart">@dimen/rb_padding</item>
+    <item name="android:paddingEnd">@dimen/rb_padding</item>
+    <item name="android:textSize">@dimen/notification_text_size</item>
+    <item name="android:textColor">@color/notification_text_color</item>
+    <item name="android:textAlignment">textStart</item>
+    <item name="fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="reaction_text_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">@dimen/reaction_text_size</item>
+    <item name="android:textColor">@color/reaction_text_color</item>
+    <item name="android:paddingEnd">@dimen/dp5</item>
+    <item name="android:paddingStart">@dimen/dp5</item>
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="chat_bottom_dialog">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:drawablePadding">@dimen/dp24</item>
+    <item name="android:paddingTop">@dimen/dp12</item>
+    <item name="android:paddingBottom">@dimen/dp12</item>
+    <item name="android:paddingStart">@dimen/dp16</item>
+    <item name="android:paddingEnd">@dimen/dp16</item>
+    <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+    <item name="android:textColor">@color/bottom_sheet_text_color</item>
+    <item name="fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+
+  <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:windowBackground">@drawable/bless_splash</item>
+  </style>
+
+  <style name="disable_button" parent="@style/Widget.AppCompat.Button.Colored">
+    <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    <item name="android:background">@drawable/negative_button_bg</item>
+    <item name="android:letterSpacing">0.025</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:paddingLeft">24dp</item>
+    <item name="android:paddingRight">24dp</item>
+    <item name="android:paddingTop">12dp</item>
+    <item name="android:paddingBottom">12dp</item>
+    <item name="android:textColor">@color/negative_button_text_color</item>
+  </style>
+
+  <style name="report_radio_button_style">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">start</item>
+    <item name="android:layoutDirection">rtl</item>
+    <item name="android:button">@drawable/report_radio_button</item>
+    <item name="android:paddingTop">@dimen/mute_setting_box_margin</item>
+    <item name="android:paddingBottom">@dimen/mute_setting_box_margin</item>
+    <item name="android:textSize">@dimen/notification_text_size</item>
+    <item name="android:textColor">@color/user_setting_text_color</item>
+    <item name="android:textAlignment">textStart</item>
+    <item name="fontFamily">@font/sf_pro_display_medium</item>
+  </style>
+</resources>

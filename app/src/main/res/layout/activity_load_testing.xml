@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clLoadTesting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <include
+      layout="@layout/all_toolbar_dark"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:gravity="center"
+      android:text="Select Event"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <androidx.appcompat.widget.AppCompatSpinner
+      android:id="@+id/spinnerEvent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="20dp"
+      android:padding="@dimen/dp10"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+      />
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/etTimeDelay"
+      android:layout_width="180dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp20"
+      android:gravity="center"
+      android:hint="Enter delay in MS"
+      android:inputType="number"
+      android:maxLength="5"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/spinnerEvent"
+      />
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/etCounter"
+      android:layout_width="180dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp20"
+      android:gravity="center"
+      android:hint="Enter counter"
+      android:inputType="number"
+      android:maxLength="4"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etTimeDelay"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvSenderCounter"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp20"
+      android:gravity="center"
+      android:text="Sender Counter"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/etCounter"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnStart"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/dp40"
+      android:gravity="center"
+      android:text="START"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvSenderCounter"
+      style="@style/Widget.App.Button"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/namespace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_background_color"
+    >
+
+  <include layout="@layout/all_toolbar_dark" />
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cvPublic"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginLeft="@dimen/dp16"
+      android:layout_marginTop="@dimen/dp16"
+      android:layout_marginRight="@dimen/dp16"
+      android:animateLayoutChanges="true"
+      android:background="@drawable/edittext_white_background"
+      app:cardCornerRadius="12dp"
+      app:cardUseCompatPadding="true"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+        >
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+          android:id="@+id/rbPublic"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:button="@null"
+          android:checked="false"
+          android:drawableLeft="@drawable/selected"
+          android:drawablePadding="@dimen/dp15"
+          android:fontFamily="@font/sf_pro_display_bold"
+          android:padding="@dimen/dp5"
+          android:text="@string/public_channel"
+          android:textAlignment="textStart"
+          android:textColor="@color/channel_text_blue_color"
+          android:textSize="@dimen/channel_text_title"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvPublic"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dp30"
+          android:fontFamily="@font/sf_pro_display_regular"
+          android:padding="@dimen/dp10"
+          android:text="@string/public_channel_content"
+          android:textColor="@color/channel_content_color"
+          android:textSize="@dimen/sp14"
+          />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cvPrivate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dp16"
+      android:layout_marginTop="@dimen/dp8"
+      android:layout_marginRight="@dimen/dp16"
+      android:animateLayoutChanges="true"
+      android:background="@drawable/edittext_white_background"
+      app:cardCornerRadius="12dp"
+      app:cardUseCompatPadding="true"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cvPublic"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10"
+        >
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+          android:id="@+id/rbPrivate"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:button="@null"
+          android:checked="true"
+          android:drawableLeft="@drawable/unchecked"
+          android:drawablePadding="@dimen/dp15"
+          android:fontFamily="@font/sf_pro_display_bold"
+          android:padding="@dimen/dp5"
+          android:text="@string/private_channel"
+          android:textAlignment="textStart"
+          android:textColor="@color/channel_text_black_color"
+          android:textSize="@dimen/channel_text_title"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvPrivate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dp30"
+          android:fontFamily="@font/sf_pro_display_regular"
+          android:padding="@dimen/dp10"
+          android:text="@string/private_channel_content"
+          android:textColor="@color/channel_content_color"
+          android:textSize="@dimen/sp14"
+          />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fabNext"
+      android:layout_width="@dimen/fab_default_size"
+      android:layout_height="@dimen/fab_default_size"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:src="@drawable/ic_chevron_right"
+      app:backgroundTint="@color/fab_enable_bg"
+      app:fabCustomSize="@dimen/fab_default_size"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

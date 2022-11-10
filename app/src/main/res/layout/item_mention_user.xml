@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp12"
+    android:paddingTop="@dimen/dp8"
+    android:paddingEnd="@dimen/dp12"
+    android:paddingBottom="@dimen/dp8">
+
+    <com.ripbull.ertc.components.AvatarImageView
+        android:id="@+id/ivUserPicture"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:cropToPadding="true"
+        android:foreground="@drawable/ic_contact_photo_background"
+        tools:src="@color/blue_600"
+        />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="8dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            style="TextAppearance.MaterialComponents.Body2"
+            android:textColor="#DE000000"
+            android:textSize="12sp"
+            tools:text="Dow Jones"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif"
+            android:singleLine="true"
+            android:layout_below="@+id/tvName"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textDirection="ltr"
+            android:textSize="10sp"
+            tools:text="dow.jones@gmail.com"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

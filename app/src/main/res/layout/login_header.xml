@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+  <ImageView
+      android:id="@+id/imgLogo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="58dp"
+      android:layout_marginRight="58dp"
+      android:layout_marginTop="50dp"
+      android:layout_gravity="center_horizontal"
+      android:background="@drawable/logo"
+      />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="12dp"
+      android:fontFamily="@font/sf_pro_display_semi_bold"
+      android:text="eRTC Software Development Kit"
+      android:textSize="17sp"
+      android:visibility="gone"
+      style="@style/Widget.App.TextView.Title"
+      />
+</LinearLayout>

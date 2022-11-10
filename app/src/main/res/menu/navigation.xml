@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/navigation_messages"
+      android:enabled="true"
+      android:icon="@drawable/all_messages"
+      android:title="@string/title_messages"
+      app:contentDescription="@string/title_messages" />
+
+  <item
+      android:id="@+id/navigation_contacts"
+      android:enabled="true"
+      android:icon="@drawable/all_contacts"
+      android:title="@string/title_contacts"
+      app:contentDescription="@string/title_contacts" />
+
+  <item
+      android:id="@+id/navigation_threads"
+      android:enabled="true"
+      android:icon="@drawable/all_threads"
+      android:title="@string/title_threads"
+      app:contentDescription="@string/title_threads" />
+
+  <item
+      android:id="@+id/navigation_more"
+      android:enabled="true"
+      android:icon="@drawable/all_more"
+      android:title="@string/title_more"
+      app:contentDescription="@string/title_more" />
+</menu>

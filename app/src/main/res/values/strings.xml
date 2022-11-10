@@ -1,0 +1,423 @@
+<resources>
+  <string name="title_activity_login">Sign in</string>
+  <!-- Strings related to login -->
+  <string name="prompt_email">Email</string>
+  <string name="prompt_password">Password</string>
+  <string name="action_sign_in">Sign in or register</string>
+  <string name="action_sign_in_short">Sign in</string>
+  <string name="error_invalid_email">This email address is invalid</string>
+  <string name="error_invalid_password">This password is too short</string>
+  <string name="error_incorrect_password">This password is incorrect</string>
+  <string name="error_field_required">This field is required</string>
+  <string name="permission_rationale">"Contacts permissions are needed for providing email
+    completions."
+  </string>
+
+  <string name="title_activity_login2">Sign in</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+  <string name="title_messages">Messages</string>
+  <string name="title_contacts">Contacts</string>
+  <string name="title_groups">Channels</string>
+  <string name="title_threads">Threads</string>
+  <string name="title_settings">Settings</string>
+  <string name="title_more">More</string>
+  <string name="notification_settings">Notification Settings</string>
+  <string name="starred_messages">Starred Messages</string>
+  <string name="block_user">Block Maggie Phillips</string>
+  <string name="updates">Updates</string>
+  <string name="fav_messages">Favorite messages</string>
+  <string name="sdk_version">SDK version</string>
+  <string name="log_out">Log out</string>
+  <string name="email">Email</string>
+  <string name="send_message">Send Message</string>
+  <string name="mute_notif">Mute Notifications</string>
+
+  <!-- attachment_type -->
+  <string name="attachment_type_audio">Audio</string>
+  <string name="attachment_type_contact">Contact</string>
+  <string name="attachment_type_camera">Camera</string>
+  <string name="attachment_type_location">Location</string>
+  <string name="attachment_type_gif">GIF</string>
+  <string name="attachment_type_gallery">Gallery</string>
+  <string name="attachment_type_file">File</string>
+
+  <!-- AttchmentManager -->
+  <string name="attachment_cant_open_media_selection">Can\'t find an app to select media.</string>
+  <string name="attachment_photos_videos_or_audio_denied">App requires the Storage permission in order to attach photos, videos, or audio, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Storage\".</string>
+  <string name="attachment_contact_denied">App requires Contacts permission in order to attach contact information, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Contacts\".</string>
+  <string name="attachment_location_denied">App requires Location permission in order to attach a location, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Location\".</string>
+  <string name="attachment_take_photos_denied">App requires the Camera permission in order to take photos, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Camera\".</string>
+  <string name="attachment_take_videos_denied">App requires the Camera permission in order to take videos, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Camera\".</string>
+  <string name="attachment_record_audio_denied">App requires the Record Audio permission in order to record audio, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Record Audio\".</string>
+  <string name="attachment_document_denied">App requires the Storage permission in order to attach document but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"Storage\".</string>
+
+
+  <string name="blocked_user_toast">You have blocked this user</string>
+  <string name="blocked_group_toast">You are not part of this channel</string>
+  <string name="hint_message">Message...</string>
+  <string name="menu_attachment">Attachment</string>
+  <string name="menu_view_profile">View profile</string>
+  <string name="menu_block_user">User Blocking</string>
+  <string name="manage_notification">Manage notifications</string>
+
+  <string name="no_chat_history">You have no messages</string>
+
+  <!-- Block,Unblock user -->
+  <string name="menu_title_block_user">Block</string>
+  <string name="menu_title_unblock_user">Unblock</string>
+  <string name="block_user_action">block</string>
+  <string name="unblock_user_action">unblock</string>
+  <string name="block_user_message">User is blocked successfully</string>
+  <string name="unblock_user_message">User is unblocked successfully</string>
+
+  <!-- Attachment Title -->
+  <string name="attachment_image_title">Image</string>
+  <string name="attachment_video_title">Video</string>
+  <string name="attachment_location_title">Location</string>
+  <string name="attachment_contacts_title">Contacts</string>
+  <string name="attachment_audio_title">Audio</string>
+  <string name="attachment_document_title">Document</string>
+
+  <string name="toolbar_message_title">Message</string>
+  <string name="toolbar_contacts_title">Contacts</string>
+
+  <string name="attachment_permissions_denied">App requires all the permissions, but it has been permanently denied. Please continue to the app settings menu, select \"Permissions\", and enable \"All\".</string>
+
+  //add title in Notification Settings
+  <string name="my_profile">My profile</string>
+  <string name="change_password">Change Password</string>
+  <string name="menu_edit">Edit</string>
+
+  //Logout popup in Notification Settings
+  <string name="logout_title">Logout!!</string>
+  <string name="logout_message">Are you sure you want to logout?</string>
+  <string name="logout_yes">YES</string>
+  <string name="logout_no">NO</string>
+  <string name="logout">LOG OUT</string>
+  <string name="cancel">CANCEL</string>
+  <string name="clear">CLEAR</string>
+
+  //API success messages
+  <string name="login_success">Login successful!!</string>
+  <string name="change_password_success">Password changed successfully</string>
+
+  //Change Password Alert Message
+  <string name="cp_old_password_empty">Old Password is never empty</string>
+  <string name="cp_new_password_empty">You can\'t set New Password as empty</string>
+  <string name="cp_old_and_new_password_are_same">You can\'t set Old Password as New Password</string>
+  <string name="cp_confirm_new_password_empty">You can\'t set Confirmation New Password as empty</string>
+  <string name="cp_new_and_confirm_password_are_not_same">New Password and Confirm Password does not match</string>
+  <string name="new_password_length">New Password must be at least 8 characters long</string>
+
+  <string name="invalid_file_format">Invalid File Format</string>
+  <string name="audio_cancel">CANCEL</string>
+
+
+  <string name="message_notifier_d_new_messages_in_d_conversations">%1$d new messages in %2$d conversations</string>
+  <string name="message_notifier_most_recent_from_s">Most recent from: %1$s</string>
+  <string name="message_notifier_locked_message">Locked message</string>
+  <string name="message_notifier_media_message_with_text">Media message: %s</string>
+  <string name="message_notifier_message_delivery_failed">Message delivery failed.</string>
+  <string name="message_notifier_failed_to_deliver_message">Failed to deliver message.</string>
+  <string name="message_notifier_error_delivering_message">Error delivering message.</string>
+  <string name="message_notifier_mark_all_as_read">Mark all as read</string>
+  <string name="message_notifier_mark_read">Mark read</string>
+  <string name="message_notifier_media_message">Media message</string>
+  <string name="message_notifier_reply">Reply</string>
+  <string name="message_notifier_pending_signal_messages">Pending Signal messages</string>
+  <string name="message_notifier_you_have_pending_signal_messages">You have pending Signal messages, tap to open and retrieve</string>
+  <string name="message_notifier_contact_message">%1$s %2$s</string>
+  <string name="message_notifier_unknown_contact_message">Contact</string>
+
+  // Image capture failure message
+  <string name="capture_failure_message">Something went wrong, please try again</string>
+
+  //validation message
+  <string name="empty_namespace_validation_message">Please enter namespace</string>
+  <string name="empty_username_validation_message">Please enter username</string>
+  <string name="empty_access_code_validation_message">Please enter access code</string>
+
+  <string name="select_users">Please select users</string>
+  <string name="group_name">Channel name</string>
+  <string name="group_desc">Channel Description</string>
+  <string name="participants">Channel Members</string>
+  <string name="no_participants">select participants.</string>
+  <string name="group_create_success">Channel created successfully</string>
+  <string name="group_create_fail">Channel create failure</string>
+
+  <string name="group_update_success">Channel updated successfully</string>
+  <string name="group_update_fail">Channel update failure</string>
+
+  <string name="remove_user">Remove user!!</string>
+
+  <string name="desc">Description</string>
+  <string name="exit_group">Exit Channel</string>
+
+  <string name="share_current_location">Send current location</string>
+  <string name="menu_search">Search</string>
+  <string name="all_nearby_places">Nearby locations</string>
+  <string name="invalid_location">Invalid Location</string>
+  <string name="no_contact_available">No contacts found</string>
+  <string name="invalid_contact">There is no phone number and email available</string>
+  <string name="status">Status</string>
+  <string name="invalid_image">Invalid Image</string>
+  <string name="picture_validation_message">Please select image for profile</string>
+
+  <string name="user_failure_message">Something went wrong, Can\'t fetch User Details</string>
+  <string name="alert_short_audio">Audio is too short.!!</string>
+  <string name="doc_name">DocumentName</string>
+  <string name="attachment_gif_title">GIF</string>
+  <string name="search_gif">Search GIF</string>
+  <string name="alert_gif_file_select">Please select GIF file.!!</string>
+  <string name="failure_message">Something went wrong.!!!</string>
+  <string name="media_not_found">Image not found..!!</string>
+  <string name="video_not_found">Video not found..!!</string>
+  <string name="hold_to_record">Hold to Record.!!</string>
+  <string name="menu_item_star">Star</string>
+  <string name="menu_item_unstar">Unstar</string>
+  <string name="alert_select_message">You have to select at least one message to make it favourite</string>
+
+  <string name="title_send_location">Send Location</string>
+  <string name="title_starred_messages">Starred messages</string>
+  <string name="title_clear_chat">Clear chat history</string>
+  <string name="title_leave_channel">Leave channel</string>
+
+  //Group
+  <string name="create_group">Create channel</string>
+  <string name="update_group">Update Channel</string>
+  <string name="view_group">View Channel Info</string>
+  <string name="create_channel">Channel Details</string>
+
+  //Audio file path error alert
+  <string name="audio_path_empty">Audio file path is empty!!</string>
+  <string name="audio_file_not_found">No such Audio file found!!</string>
+
+  <string name="profile_status_empty">Status is mandatory</string>
+  <string name="username_mandatory">Username is mandatory</string>
+  <string name="password_mandatory">Password is mandatory</string>
+  <string name="group_name_mandatory">Channel name is mandatory</string>
+  <string name="description_mandatory">Description is mandatory</string>
+  <string name="title_next">CONTINUE</string>
+  <string name="hint_namespace">Namespace</string>
+  <string name="hint_access_code">Access Code</string>
+
+  <string name="new_relic_app_token">AA784b5b047ac6f23ff59d27181708f34533ce68e1-NRMA</string>
+
+  //Thread
+  <string name="copy">Copy</string>
+  <string name="start_thread">Reply to thread</string>
+  <string name="add_fav">Add to Favorites</string>
+  <string name="remove_fav">Remove from Favorites</string>
+  <string name="text_copied">Copied</string>
+  <string name="thread">Thread</string>
+  <string name="send_to_user">Also send as direct message</string>
+  <string name="send_to_group">Also send to channel</string>
+  <string name="no_status">No Status Available</string>
+  <string name="follow_thread">Follow thread</string>
+  <string name="unfollow_thread">Unfollow thread</string>
+  <string name="report_message">Report Message</string>
+
+  <string name="no_chat_available">No chat available!</string>
+
+  //Load Testing
+  <string-array name="event">
+    <item>Select Event</item>
+    <item>Send Chat</item>
+    <item>Update User Status</item>
+    <item>Typing status MQTT</item>
+  </string-array>
+
+  <string name="deactivated_user">This user is deactivated</string>
+  <string name="user_deactivated">User account is deactivated</string>
+
+  //Mute Notifications
+  <string name="every_new_message">Allow all</string>
+  <string name="just_mentions">Mentions only</string>
+  <string name="nothing">None</string>
+  <string name="no_group_available">No channels found</string>
+  <string name="video_size_large">Video size is too large. You can\'t upload video more than 25 MB</string>
+  <string name="unmute_notification">Unmute notifications</string>
+
+  <string name="user_mention_color">#FDC433</string>
+  <string name="generic_mention_color">#77CC8A</string>
+  <string name="auto_text_id_color">#a90060B5</string>
+  <string name="outgoing_text_msg_color">#FFFFFF</string>
+  <string name="logged_in_user_alert">it\'s you !!</string>
+  <string name="reaction">Add reaction</string>
+
+  <string name="cant_fetch_group">Something went wrong, Can\'t fetch Channel Details</string>
+  <string name="no_starred_messages">No starred message found!</string>
+  <string name="please_wait">Please wait</string>
+  <string name="forgot_password">Forgot Password</string>
+  <string name="wrong_namespace">Wrong namespace</string>
+  <string name="go_to_admin_portal">Go to Admin Portal</string>
+  <string name="username">Email@address.com</string>
+  <string name="password">Password</string>
+  <string name="login_title">Log in to Namespace</string>
+  <string name="change">Change</string>
+  <string name="old_password">Old Password</string>
+  <string name="new_password">New Password</string>
+  <string name="confirm_password">Confirm Password</string>
+  <string name="notifications">Manage notifications</string>
+  <string name="change_password_setting">Change password</string>
+  <string name="send_btn_bg">#32BA58</string>
+  <string name="forgot_pwd_title">Forgot Password</string>
+  <string name="on">On</string>
+  <string name="off">Off</string>
+
+  <string name="fab_disable_bg">#71869C</string>
+  <string name="fab_enable_bg">#1E88E5</string>
+
+  <string name="no_of_participants">%d participants</string>
+  <string name="sent_to_channel_title">Also sent to conversation</string>
+  <string name="reply_to_thread">Replied to thread: %s</string>
+  <string name="reply">%d Reply</string>
+  <string name="view_replies">"View %d more replies"</string>
+  <string name="view_reply">View replies</string>
+  <string name="start_a_thread_error_message">Please wait for message to send to start a thread</string>
+
+  <string name="giphy_url">https://media.giphy.com/media/%s/giphy.gif</string>
+  <string name="notification_title">%s to %s</string>
+  <string name="mention_user_regex"><![CDATA[<@]]>%s<![CDATA[>]]></string>
+  <string name="under_score">_</string>
+  <string name="left_group">Left the channel successfully</string>
+  <string name="add_participant_group">Participant added successfully</string>
+  <string name="add_as_admin">Updated as admin successfully</string>
+  <string name="remove_from_admin">Dismissed from admin successfully</string>
+  <string name="remove_participant_group">Removed from the channel successfully</string>
+  <string name="no_address_selected">We could not fetch any location , Try again !</string>
+  <string name="deleteMessageTitle">Delete Message ?</string>
+  <string name="forEveryOne">DELETE FOR EVERYONE</string>
+  <string name="forUser">"DELETE FOR ME "</string>
+  <string name="deleteMessage">Delete</string>
+  <string name="forward">Forward</string>
+  <string name="select_forward_chat_contact_or_group">Please select at least one contact or channel</string>
+  <string name="forward_chat_max_limit">Forwarding more than 10 contacts or channels are not allowed</string>
+  <string name="forwarded">Forwarded</string>
+  <string name="msgForwarded">Message forwarded</string>
+  <string name="deleteForEveryOne">Delete for everyone</string>
+  <string name="deleteForUser">Delete just for me</string>
+  <string name="delete">DELETE</string>
+  <string name="editMessage">Edit</string>
+  <string name="editMessageTitle">Edit Message</string>
+  <string name="group">Channel</string>
+  <string name="contact">Contact</string>
+
+  //Chat restoration
+  <string name="backup_message_found">Backup messages found</string>
+  <string name="backup_message_description">Restore your message history from backup. By choosing not to restore you will not be able to access these messages later.</string>
+  <string name="restore">RESTORE</string>
+  <string name="skip_restore">SKIP RESTORE</string>
+  <string name="restore_messages">Restore messages</string>
+  <string name="no_search">No recent searches</string>
+  <string name="global_search">Global search</string>
+  <string name="no_result_found">No result found</string>
+  <string name="continueText">Continue</string>
+  <string name="restoreSuccessTitle">Message restored!</string>
+  <string name="restoreSuccessMessage">You\'re all set. Tap the button to continue.</string>
+  <string name="access_token">lc6616768ff6806bz584j2watmyebqkc</string>
+
+  <string name="public_channel">Public Channel</string>
+  <string name="private_channel">Private Channel</string>
+  <string name="public_channel_content">Public channels allow for a maximum of 1,000 users to interact without needing permission, however the maximum number can be increased per request.\n\nAny member of a public channel can add other users as channel members, as well as invite their friends to sign up for the app and join the channel.</string>
+  <string name="private_channel_content">Private channels allow for interaction between a maximum of 100 users who were added or invited by the channel administrator.\n\nOnly channel admins are able to add members or invite others to sign up for the app and join their private channel.</string>
+  <string name="channel_privacy">Channel Privacy</string>
+  <string name="add_participants">Add Participants</string>
+  <string name="menu_add">Add</string>
+  <string name="all">All</string>
+  <string name="update">Update</string>
+
+  //Report Message
+  <string name="spam">Spam</string>
+  <string name="inappropriate">Inappropriate</string>
+  <string name="abuse">Abuse</string>
+  <string name="other">Other</string>
+  <string name="et_reason_hint">Enter report reason</string>
+  <string name="submit">Submit</string>
+
+  <string name="spam_value">spam</string>
+  <string name="inappropriate_value">inappropriate</string>
+  <string name="abuse_value">abuse</string>
+  <string name="other_value">other</string>
+
+  <string name="join">Join</string>
+  <string name="txt_private">Private</string>
+  <string name="name">Name</string>
+  <string name="btn_next">NEXT</string>
+  <string name="dialog_title">Dialog Title</string>
+  <string name="dialog_info">This is informative message for alert dialog!!!</string>
+  <string name="select_admin">Select Administrators</string>
+  <string name="select_admin_alert">Please select admin</string>
+
+  <string name="admin_exit_alert">Leave Channel?</string>
+  <string name="admin_exit_info">There are no other admins of this channel, so you will need to choose a replacement admin before you can successfully leave the channel.</string>
+  <string name="admin_leave_alert">Are you sure you want to go?</string>
+  <string name="admin_leave_private_channel">You will need to be invited to be able to enter the channel once again.</string>
+  <string name="admin_leave_public_channel">You will need to rejoin the channel in order to participate in the conversation.</string>
+  <string name="removed_from_admin">You are removed from admin so you can\'t update channel details</string>
+  <string name="join_group">You have joined this channel.</string>
+  <string name="btn_leave">LEAVE</string>
+
+  <string name="channels">My channels</string>
+  <string name="browse_channel">Browse channels</string>
+  <string name="please_join_channel">Please join channel first</string>
+  <string name="add_members">Add members</string>
+  <string name="failed_to_send">Failed to Send</string>
+  <string name="server_timeout_info">Due to server unavailability or slow network coverage, the media file could not be sent</string>
+  <string name="try_again">TRY AGAIN</string>
+  <string name="try_again_color">#3880FE</string>
+  <string name="txt_frozen_alert">This channel is currently frozen, and you are unable to send messages or share media.</string>
+  <string name="txt_delete_alert">This Channel has been removed. You will no longer be able to send message or access the channel.</string>
+  <string name="txt_deactivated_alert">This Channel has been deactivated. You will no longer be able to send message or access the channel.</string>
+
+  <string name="announcement">Announcement</string>
+  <string name="view_full_announcement">View full announcement</string>
+  <string name="dismiss">Dismiss</string>
+
+  <string name="follow_chat">Thread followed successfully</string>
+  <string name="unfollow_chat">Thread unfollowed successfully</string>
+  <string name="please_wait_video">Please wait, video compression is in progress</string>
+  <string name="max_limit">You reached maximum character limit</string>
+  <string name="all_user_added">You have added all users to this channel</string>
+  <string name="image_library">Image Library</string>
+  <string name="menu_share">Share</string>
+  <string name="menu_info">Info</string>
+  <string name="gallery">Gallery</string>
+  <string name="send_to">Send to</string>
+  <string name="close">CLOSE</string>
+  <string name="uploaded_by">Uploaded By</string>
+  <string name="details">Details</string>
+  <string name="channel_gallery">Channel Gallery</string>
+  <string name="no_media">No media found</string>
+  <string name="no_thread_found">No thread found</string>
+  <string name="thread_reply">Reply</string>
+  <string name="delete_thread">Delete thread</string>
+  <string name="recent_searches">Recent searches</string>
+  <string name="clear_history">CLEAR SEARCH HISTORY</string>
+  <string name="notification_level">Notification level</string>
+  <string name="apply_setting">Apply settings for</string>
+  <string name="always">Always</string>
+  <string name="hours_24">24 hours</string>
+  <string name="hours_72">72 hours</string>
+  <string name="week_1">1 week</string>
+  <string name="weeks_2">2 weeks</string>
+  <string name="month_1">1 month</string>
+  <string name="notification_updated">Manage notification updated successfully</string>
+  <string name="txt_no_internet">You are offline, please make sure you are connected to the internet.</string>
+  <string name="custom_notification_set">Custom Notifications Set</string>
+  <string name="custom_notification_info">You already have a custom notification schedule set. Select View to see remaining schedule, or Delete to end it.</string>
+  <string name="view">VIEW</string>
+  <string name="profanity_alert">The message you are attempting to share contains language that is restricted from being used in this chat.</string>
+  <string name="domain_alert">The message or media you are attempting to share contains a link from a restricted domain and cannot be sent.</string>
+  <string name="no_internet">Network unavailable</string>
+  <string name="allow_audio">Please granted record audio permission</string>
+  <string name="allow_storage">Please granted write external storage permission</string>
+  <string name="sign_in">SIGN IN</string>
+  <string name="logout_successfully">Logout successfully!</string>
+  <string name="sign_in_with_auth0">SIGN IN WITH AUTH0</string>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <include
+      layout="@layout/all_toolbar_dark"
+      app:layout_constraintBottom_toTopOf="@+id/rvUserList"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvUsers"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp5"
+      android:visibility="gone"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      android:scrollbars="horizontal"
+      tools:listitem="@layout/item_selected_participant"
+      />
+
+  <View
+      android:id="@+id/divider"
+      android:layout_width="match_parent"
+      android:layout_height="2dp"
+      android:visibility="gone"
+      android:background="@drawable/divider"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rvUsers"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvUserList"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="@dimen/dp10"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rvUsers"
+      tools:listitem="@layout/item_user_list"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvNoUser"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="@string/no_contact_available"
+      android:textColor="@color/card_view_tag"
+      android:textSize="@dimen/no_chat_title_size"
+      android:visibility="gone"
+      android:layout_marginTop="@dimen/dp50"
+      android:fontFamily="@font/sf_pro_display_regular"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rvUsers"
+      tools:ignore="MissingConstraints"
+      />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:layout_width="@dimen/fab_default_size"
+      android:id="@+id/fabNext"
+      android:src="@drawable/ic_chevron_right"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginEnd="16dp"
+      app:fabCustomSize="@dimen/fab_default_size"
+      android:layout_marginBottom="16dp"
+      android:layout_height="@dimen/fab_default_size"
+      app:backgroundTint="@color/fab_disable_bg"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

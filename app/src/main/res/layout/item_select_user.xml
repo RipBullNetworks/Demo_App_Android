@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:focusable="true"
+    android:id="@+id/background"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingEnd="12dp"
+    android:paddingStart="12dp"
+    >
+
+  <LinearLayout
+      android:id="@+id/content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cbUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:button="@drawable/checkbox_layout"
+        android:checked="false"/>
+
+    <com.ripbull.ertc.components.AvatarImageView
+        android:id="@+id/contact_photo_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:cropToPadding="true"
+        android:layout_marginStart="@dimen/dp24"
+        android:foreground="@drawable/ic_contact_photo_background"
+        tools:src="@color/blue_600"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        >
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ellipsize="marquee"
+          android:singleLine="true"
+          style="TextAppearance.MaterialComponents.Body2"
+          android:textColor="#DE000000"
+          android:textSize="@dimen/user_text_size"
+          android:drawablePadding="@dimen/dp5"
+          android:fontFamily="@font/sf_pro_display_regular"
+          tools:text="Frieeeeeeedrich Nieeeeeeeeeetzsche"
+          />
+
+      <LinearLayout
+          android:id="@+id/number_container"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textDirection="ltr"
+            android:textSize="@dimen/email_text_size"
+            android:textColor="@color/email_text_color"
+            tools:text="mandinesh89@gmail.com"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:paddingLeft="10dip"
+            android:paddingStart="10dip"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimaryButton"
+            android:layout_alignParentEnd="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="Mobile"
+            />
+
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp10"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp20">
+
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_mail"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:id="@+id/tvEmailAddress"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivEmail"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailAddress"
+            android:text="@string/email"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:background="#D7D7D7"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp20">
+
+        <ImageView
+            android:id="@+id/ivSendMessage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_send_msg"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:id="@+id/tvSendMessage"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivSendMessage"
+            android:gravity="center"
+            android:text="@string/send_message"
+            tools:ignore="MissingConstraints"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:background="#D7D7D7"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp20">
+
+        <ImageView
+            android:id="@+id/ivMuteNotif"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_mute_notif"
+            tools:ignore="MissingConstraints"
+            />
+
+        <TextView
+            android:id="@+id/tvMuteNotif"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/ivMuteNotif"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/mute_notif"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

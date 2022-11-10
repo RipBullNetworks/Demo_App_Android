@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#2B3D4F</color>
+  <color name="colorPrimaryDark">#2B3D4F</color>
+  <color name="colorAccent">#FF6332</color>
+  <color name="status_bar">#2B3D4F</color>
+  <color name="background">#273644</color>
+  <color name="edit_background">#2B3D4F</color>
+  <color name="edit_hint">#40FFFFFF</color>
+  <color name="edit_stroke">#B0B0B0</color>
+
+  <color name="gray20">#ffcccccc</color>
+  <color name="transparent_white_30">#30ffffff</color>
+  <color name="transparent">#00FFFFFF</color>
+  <color name="divider">#959595</color>
+
+  <color name="touch_highlight">#400099cc</color>
+
+  <color name="white">#fff</color>
+  <color name="highlight_light">#33ffffff</color>
+  <color name="colorPrimaryButton">#3E84FF</color>
+  <color name="colorLoginButton">#FF6332</color>
+
+  <color name="white_text_color">#FFFFFF</color>
+  <color name="toolbar_background_color">#2B3D4F</color>
+  <color name="colorAccentBorder">#EDEDED</color>
+  <color name="newWhite">#FFFFFF</color>
+  <color name="chat_background_color">#F9F8F8</color>
+  <color name="chat_title_color">#FFFFFF</color>
+  <color name="chat_incoming_msg_bg">#E7E6E6</color>
+  <color name="chat_outgoing_msg_bg">#1E88E5</color>
+  <color name="incoming_text_msg_color">#2C2C2F</color>
+  <color name="outgoing_text_msg_color">#FFFFFF</color>
+  <color name="incoming_time_stamp_color">#A02C2C2F</color>
+  <color name="outgoing_time_stamp_color">#A0FFFFFF</color>
+  <color name="chat_item_title_color">#DE000000</color>
+  <color name="chat_item_subtitle_color">#61000000</color>
+  <color name="chat_item_date_color">#B4B4B4</color>
+  <color name="transparent_black_30">#30000000</color>
+  <color name="transparent_black">#00000000</color>
+  <color name="gray50">#ff808080</color>
+  <color name="card_view_title">#2D3237</color>
+  <color name="card_view_tag">#71869C</color>
+  <color name="outgoing_status_color">#9F9F9F</color>
+
+  <color name="chat_not_downloaded_media_back_color">@null</color>
+  <color name="outgoing_image_title_color">#000000</color>
+  <color name="chat_receive_media_bg">#E7E6E6</color>
+  <color name="chat_send_media_bg">#1E88E5</color>
+  <color name="sent_audio_time_stamp_color">#AFFFFFFF</color>
+  <color name="receive_audio_time_stamp_color">#A02C2C2F</color>
+  <color name="chat_receive_audio_bg">#E7E6E6</color>
+  <color name="chat_send_audio_bg">#1E88E5</color>
+  <color name="show_image_activity_bg">#000000</color>
+  <color name="chat_date_info_color">#9F9F9F</color>
+  <color name="audio_cancel_button_color">#F62525</color>
+  <color name="chat_input_text_hint_color">#61000000</color>
+  <color name="chat_input_text_color">#2C2C2F</color>
+
+  //Change Password Edit text background
+  <color name="white_edit_background">#FFFFFF</color>
+  <color name="white_edit_hint">#ADADAD</color>
+  <color name="white_edit_text">#000000</color>
+
+  //Share Contact and Location
+  <color name="white_contact_text">#FFFFFF</color>
+  <color name="colorGreyDivider">#F6F6F6</color>
+  <color name="title_color">#000000</color>
+  <color name="location_search_place">#454545</color>
+  <color name="chat_star_msg_bg">#200099CC</color>
+  <color name="chat_header_username_color">#2D3237</color>
+
+  //Group
+  <color name="group_profile_bg">#FFC837</color>
+  <color name="group_exit_color">#FF1F1F</color>
+  <color name="chat_info_bg">#CDCDCD</color>
+  <color name="chat_info_text_color">#626262</color>
+
+  //Thread
+  <color name="bottom_dialog_bg">#FFFFFF</color>
+  <color name="thread_text_color">#FFFFFF</color>
+  <color name="thread_box_bg">#BABABA</color>
+  <color name="thread_count_box_bg">#4D99C9F3</color>
+  <color name="thread_stroke_color">#CCA9D6FF</color>
+  <color name="thread_count_text_color">#4A4A4A</color>
+  <color name="thread_main_msg_color">#CCFFFFFF</color>
+  <color name="fab_transparent_bg">#3E84FF</color>
+
+  //Mute Notifications
+  <color name="notification_text_color">#2D3237</color>
+
+  //Reaction
+  <color name="reaction_text_color">#4A4A4A</color>
+
+  //Progress Bar
+  <color name="progressbar_title_color">#393B3E</color>
+
+  //On-Board text hint color
+  <color name="login_text_hint">#71869C</color>
+  <color name="error_msg_color">#DB3131</color>
+
+  <color name="bottom_menu_bg">#EB2B3D4F</color>
+  <color name="bottom_menu_checked">#FFFFFF</color>
+  <color name="bottom_menu_unchecked">#71869C</color>
+  <color name="fb_bg">#1E88E5</color>
+  <color name="chat_user_name_color">#2D3237</color>
+  <color name="chat_user_message_color">#71869C</color>
+
+  <color name="setting_title_color">#DEFFFFFF</color>
+  <color name="user_setting_text_color">#2D3237</color>
+  <color name="attachment_text_color">#607D8B</color>
+  <color name="send_btn_bg">#32BA58</color>
+  <color name="et_box_stoke">#E6E6E6</color>
+  <color name="dialog_btn_cancel">#1E88E5</color>
+  <color name="bottom_sheet_text_color">#202127</color>
+  <color name="received_audio_color">#A1A1A1</color>
+
+  <color name="user_text_color">#2D3237</color>
+  <color name="email_text_color">#71869C</color>
+  <color name="receive_thread_title_color">#CC2C2C2F</color>
+  <color name="fab_disable_bg">#71869C</color>
+  <color name="fab_enable_bg">#1E88E5</color>
+
+  <color name="group_screen_bg">#F9F8F8</color>
+  <color name="view_replies_color">#27A7EF</color>
+  <color name="time_stamp_color">#71869C</color>
+
+  <color name="selected_tab_menu">#71869C</color>
+  <color name="unselected_tab_menu">#8071869C</color>
+
+  <color name="edit_divider_line">#CECECE</color>
+  <color name="outgoing_delete_message_color">#A0FFFFFF</color>
+  <color name="incoming_delete_message_color">#A02C2C2F</color>
+
+  <color name="negative_button_bg_color">#C6C6C6</color>
+  <color name="negative_button_text_color">#4E4B4B</color>
+  <color name="backup_message_title_color">#2D2C2F</color>
+  <color name="green_toast">#2DBF46</color>
+
+  <color name="channel_text_blue_color">#457FCA</color>
+  <color name="channel_text_black_color">#212429</color>
+  <color name="channel_content_color">#495057</color>
+  <color name="add_participant_color">#0075FF</color>
+  <color name="tv_button_color">#1E88E5</color>
+  <color name="et_hint_color">#8EA0B4</color>
+  <color name="tv_participant_color">#C2FFFFFF</color>
+  <color name="alert_info_bg">#FFEDED</color>
+  <color name="txt_alert_info">#F62D2D</color>
+  <color name="announcement_dialog_bg">#FAF8F8F8</color>
+  <color name="grey_stroke_border">#DDE2E5</color>
+  <color name="info_bg_color">#F1F6FD</color>
+  <color name="info_color">#4A84CA</color>
+  <color name="filter_alert_bg">#F8F8F8</color>
+</resources>

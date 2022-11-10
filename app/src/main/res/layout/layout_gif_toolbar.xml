@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/toolbarGif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetEnd="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:titleTextAppearance="@style/AppTheme.Toolbar.Dark.Title"
+        style="@style/AppTheme.Toolbar.Dark"
+        >
+<androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewGif"
+        app:showAsAction="always"
+        app:iconifiedByDefault="false"
+        android:focusableInTouchMode="true"
+        app:queryHint="@string/menu_search"
+        android:icon="@drawable/ic_search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,14 @@
+import dependencies.*;
+
+apply from: Deps.common
+
+dependencies {
+  implementation Deps.AndroidXLibs.annotationProcessor
+  implementation Deps.AndroidXLibs.core
+  implementation Deps.AndroidXLibs.archCommon
+
+  implementation Deps.RxJava.rxjava2
+
+  //StreamAPI(java 8 API for lower version than 23)
+  implementation Deps.External.streamAPI
+}

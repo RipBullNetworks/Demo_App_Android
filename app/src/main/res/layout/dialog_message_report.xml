@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlToolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp10"
+      android:gravity="center_vertical"
+      android:background="@color/colorPrimary"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp10"
+        android:src="@drawable/cross"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/toolbar_text_padding"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="@dimen/dp10"
+        android:text="Report Message"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/chat_title_color"
+        android:textSize="@dimen/textsize_toolbardark_title"
+        android:fontFamily="@font/sf_pro_display_medium"
+        />
+  </RelativeLayout>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvReportMsg"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Report Message"
+      android:textSize="@dimen/sp16"
+      android:textColor="@color/card_view_tag"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:padding="@dimen/dp20"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rlToolbar"/>
+
+  <RadioGroup
+      android:id="@+id/rgMsgReport"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingStart="@dimen/dp20"
+      android:paddingEnd="@dimen/dp20"
+      android:layout_marginTop="@dimen/mute_setting_box_margin"
+      android:layout_marginBottom="@dimen/mute_setting_box_margin"
+      app:layout_constraintTop_toBottomOf="@+id/tvReportMsg"
+      >
+
+    <RadioButton
+        android:id="@+id/rbSpam"
+        style="@style/report_radio_button_style"
+        android:checked="true"
+        android:text="@string/spam"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider"
+        />
+
+    <RadioButton
+        android:id="@+id/rbInappropriate"
+        style="@style/report_radio_button_style"
+        android:text="@string/inappropriate"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider"
+        />
+
+    <RadioButton
+        android:id="@+id/rbAbuse"
+        style="@style/report_radio_button_style"
+        android:text="@string/abuse"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/divider"
+        />
+
+    <RadioButton
+        android:id="@+id/rbOther"
+        style="@style/report_radio_button_style"
+        android:text="@string/other"
+        />
+  </RadioGroup>
+
+  <View
+      android:id="@+id/greyDivider"
+      android:layout_width="match_parent"
+      android:layout_height="8dp"
+      android:layout_marginTop="@dimen/dp20"
+      android:background="@drawable/ic_big_divider"
+      app:layout_constraintTop_toBottomOf="@+id/rgMsgReport"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvReportReason"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Report reason"
+      android:textSize="@dimen/sp16"
+      android:textColor="@color/card_view_tag"
+      android:fontFamily="@font/sf_pro_display_medium"
+      android:paddingTop="@dimen/dp20"
+      android:paddingStart="@dimen/dp20"
+      android:paddingEnd="@dimen/dp20"
+      android:paddingBottom="@dimen/dp10"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/greyDivider"/>
+
+  <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/etReportReason"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/sf_pro_display_regular"
+      android:inputType="textCapSentences"
+      android:textColor="@color/et_hint_color"
+      android:textSize="@dimen/sp16"
+      android:hint="@string/et_reason_hint"
+      android:textColorHint="@color/et_hint_color"
+      android:paddingTop="@dimen/dp10"
+      android:paddingStart="@dimen/dp20"
+      android:paddingEnd="@dimen/dp20"
+      android:paddingBottom="@dimen/dp20"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvReportReason"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnSubmit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/dp36"
+      android:layout_marginRight="@dimen/dp36"
+      android:layout_marginTop="@dimen/dp20"
+      android:layout_marginBottom="@dimen/dp20"
+      android:text="@string/submit"
+      android:layout_gravity="bottom"
+      app:layout_constraintBottom_toBottomOf="parent"
+      style="@style/Widget.App.Button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

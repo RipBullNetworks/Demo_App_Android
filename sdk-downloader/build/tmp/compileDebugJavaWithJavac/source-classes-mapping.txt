@@ -1,0 +1,76 @@
+com/ripbull/sdk/downloader/utils/Priority.java
+ com.ripbull.sdk.downloader.utils.Priority
+com/ripbull/sdk/downloader/internal/SynchronousCall.java
+ com.ripbull.sdk.downloader.internal.SynchronousCall
+com/ripbull/sdk/downloader/request/DownloadRequest.java
+ com.ripbull.sdk.downloader.request.DownloadRequest
+ com.ripbull.sdk.downloader.request.DownloadRequest$1
+ com.ripbull.sdk.downloader.request.DownloadRequest$2
+com/ripbull/sdk/downloader/internal/stream/FileDownloadOutputStream.java
+ com.ripbull.sdk.downloader.internal.stream.FileDownloadOutputStream
+com/ripbull/sdk/downloader/Progress.java
+ com.ripbull.sdk.downloader.Progress
+com/ripbull/sdk/downloader/internal/DownloadTask.java
+ com.ripbull.sdk.downloader.internal.DownloadTask
+com/ripbull/sdk/downloader/handler/DownloadEventHandler.java
+ com.ripbull.sdk.downloader.handler.DownloadEventHandler
+com/ripbull/sdk/downloader/core/ExecutorSupplier.java
+ com.ripbull.sdk.downloader.core.ExecutorSupplier
+com/ripbull/sdk/downloader/Response.java
+ com.ripbull.sdk.downloader.Response
+com/ripbull/sdk/downloader/httpclient/HttpClient.java
+ com.ripbull.sdk.downloader.httpclient.HttpClient
+com/ripbull/sdk/downloader/internal/DownloadRunnable.java
+ com.ripbull.sdk.downloader.internal.DownloadRunnable
+com/ripbull/sdk/downloader/OnDownloadListener.java
+ com.ripbull.sdk.downloader.OnDownloadListener
+com/ripbull/sdk/downloader/core/DownloadExecutor.java
+ com.ripbull.sdk.downloader.core.DownloadExecutor
+com/ripbull/sdk/downloader/OnStartOrResumeListener.java
+ com.ripbull.sdk.downloader.OnStartOrResumeListener
+com/ripbull/sdk/downloader/BuildConfig.java
+ com.ripbull.sdk.downloader.BuildConfig
+com/ripbull/sdk/downloader/internal/ComponentHolder.java
+ com.ripbull.sdk.downloader.internal.ComponentHolder
+com/ripbull/sdk/downloader/FileDownloader.java
+ com.ripbull.sdk.downloader.FileDownloader
+com/ripbull/sdk/downloader/core/DefaultExecutorSupplier.java
+ com.ripbull.sdk.downloader.core.DefaultExecutorSupplier
+com/ripbull/sdk/downloader/FileDownloaderConfig.java
+ com.ripbull.sdk.downloader.FileDownloaderConfig
+ com.ripbull.sdk.downloader.FileDownloaderConfig$1
+ com.ripbull.sdk.downloader.FileDownloaderConfig$Builder
+com/ripbull/sdk/downloader/utils/Constants.java
+ com.ripbull.sdk.downloader.utils.Constants
+com/ripbull/sdk/downloader/core/PriorityThreadFactory.java
+ com.ripbull.sdk.downloader.core.PriorityThreadFactory
+com/ripbull/sdk/downloader/OnPauseListener.java
+ com.ripbull.sdk.downloader.OnPauseListener
+com/ripbull/sdk/downloader/httpclient/DefaultHttpClient.java
+ com.ripbull.sdk.downloader.httpclient.DefaultHttpClient
+com/ripbull/sdk/downloader/internal/DownloadRequestQueue.java
+ com.ripbull.sdk.downloader.internal.DownloadRequestQueue
+com/ripbull/sdk/downloader/core/Core.java
+ com.ripbull.sdk.downloader.core.Core
+com/ripbull/sdk/downloader/request/RequestBuilder.java
+ com.ripbull.sdk.downloader.request.RequestBuilder
+com/ripbull/sdk/downloader/core/DownloadFutureTask.java
+ com.ripbull.sdk.downloader.core.DownloadFutureTask
+com/ripbull/sdk/downloader/request/DownloadRequestBuilder.java
+ com.ripbull.sdk.downloader.request.DownloadRequestBuilder
+com/ripbull/sdk/downloader/internal/stream/FileDownloadRandomAccessFile.java
+ com.ripbull.sdk.downloader.internal.stream.FileDownloadRandomAccessFile
+com/ripbull/sdk/downloader/OnProgressListener.java
+ com.ripbull.sdk.downloader.OnProgressListener
+com/ripbull/sdk/downloader/OnCancelListener.java
+ com.ripbull.sdk.downloader.OnCancelListener
+com/ripbull/sdk/downloader/handler/ProgressHandler.java
+ com.ripbull.sdk.downloader.handler.ProgressHandler
+com/ripbull/sdk/downloader/utils/Status.java
+ com.ripbull.sdk.downloader.utils.Status
+com/ripbull/sdk/downloader/Error.java
+ com.ripbull.sdk.downloader.Error
+com/ripbull/sdk/downloader/core/MainThreadExecutor.java
+ com.ripbull.sdk.downloader.core.MainThreadExecutor
+com/ripbull/sdk/downloader/utils/DownloadUtils.java
+ com.ripbull.sdk.downloader.utils.DownloadUtils

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/searchToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentInsetEnd="0dp"
+    android:contentInsetLeft="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetStart="0dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetEndWithActions="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp"
+    app:titleMarginStart="@dimen/toolbar_title_margin_start"
+    app:titleTextAppearance="@style/AppTheme.Toolbar.Dark.Title"
+    app:titleTextColor="@color/white_text_color"
+    app:layout_collapseMode="none"
+    tools:menu="@menu/search_menu"
+    style="@style/AppTheme.Toolbar.Dark"
+    >
+
+</androidx.appcompat.widget.Toolbar>

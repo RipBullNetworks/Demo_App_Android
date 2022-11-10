@@ -1,0 +1,81 @@
+package com.ripbull.coreattachment.emoji.lists.recent
+
+import android.content.Context
+import com.ripbull.coreattachment.emoji.icons.IconInGrid
+import com.ripbull.coreattachment.emoji.icons.SimpleIcon
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
+class RecentIconsCollection {
+  private var _icons = mutableListOf<IconInGrid>()
+
+  private val maxIconsInList = 25
+
+  private var isLoaded = false
+  private var wasUpdated = false
+
+  private val storage = RecentIconsStorage()
+
+  val icons: List<IconInGrid>
+    get() = _icons
+
+  suspend fun load(context: Context) {
+    withContext(Dispatchers.IO) {
+      synchronized(this@RecentIconsCollection) {
+        if (!isLoaded) {
+          _icons = storage.load(context)
+            .map { SimpleIcon(it) }
+            .toMutableList()
+
+          isLoaded = true
+        }
+      }
+    }
+  }
+
+  suspend fun save(context: Context) {
+    withContext(Dispatchers.IO) {
+      synchronized(this@RecentIconsCollection) {
+        if (wasUpdated) {
+          val iconsToSave = _icons.map { it.icon }
+          storage.save(context, iconsToSave)
+
+          wasUpdated = false
+        }
+      }
+    }
+  }
+
+  /**
+   * @return true if the list was updated
+   */
+  fun add(icon: IconInGrid): Boolean {
+    synchronized(this) {
+      var iconIndexInList = -1
+
+      for (i in _icons.indices) {
+        if (icon.icon == _icons[i].icon) {
+          iconIndexInList = i
+          break
+        }
+      }
+
+      if (iconIndexInList == 0) {
+        return false
+      }
+
+      if (iconIndexInList > 0) {
+        _icons.removeAt(iconIndexInList)
+      }
+
+      _icons.add(0, icon)
+
+      if (_icons.size > maxIconsInList) {
+        _icons.removeAt(_icons.size - 1)
+      }
+
+      wasUpdated = true
+      return true
+    }
+  }
+}

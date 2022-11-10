@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorGreyDivider"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <fragment
+      class="com.google.android.gms.maps.SupportMapFragment"
+      android:id="@+id/map"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/llPlaces"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar"
+      />
+
+  <include
+      layout="@layout/all_toolbar_dark"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivCurrentLocation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/dp10"
+      android:background="@drawable/ic_location"
+      app:layout_constraintBottom_toTopOf="@+id/llPlaces"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      />
+
+  <LinearLayout
+      android:id="@+id/llPlaces"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/location_share_bottomsheet"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      >
+
+    <RelativeLayout
+        android:id="@+id/rlCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingRight="@dimen/dp5"
+        app:behavior_hideable="false"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivLocation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/dp16"
+          app:srcCompat="@drawable/ic_current_location"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvCurrentLocation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:singleLine="true"
+          android:layout_marginTop="@dimen/dp8"
+          android:layout_toRightOf="@+id/ivLocation"
+          android:text="@string/share_current_location"
+          android:textColor="@color/chat_user_name_color"
+          android:textSize="@dimen/sp16"
+          android:fontFamily="@font/sf_pro_display_regular"
+          tools:text="@tools:sample/full_names"
+          />
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvCurrentLocationAddress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="@dimen/dp20"
+          android:layout_toRightOf="@+id/ivLocation"
+          android:layout_below="@+id/tvCurrentLocation"
+          android:ellipsize="end"
+          android:singleLine="true"
+          android:textColor="@color/chat_user_name_color"
+          android:textSize="@dimen/sp12"
+          android:fontFamily="@font/sf_pro_display_regular"
+          tools:text="@tools:sample/cities"
+          />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_nearby_places"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/chat_user_message_color"
+        android:textSize="@dimen/sp14"
+        android:fontFamily="@font/sf_pro_display_regular"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

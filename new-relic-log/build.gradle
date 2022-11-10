@@ -1,0 +1,49 @@
+import dependencies.Version
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: './gradleScript/dependencies.gradle'
+
+android {
+  compileSdkVersion Version.compileSdk
+
+  defaultConfig {
+    minSdkVersion Version.minSdk
+    targetSdkVersion Version.targetSdk
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    consumerProguardFiles "consumer-rules.pro"
+  }
+
+  def BASE_URL = "https://log-api.newrelic.com/"
+  def LICENSE_KEY = "33d7b0e60989a3b7f917892712e718b36a4cNRAL"
+
+  buildTypes {
+    debug {
+      minifyEnabled false
+      buildConfigField "String", "LICENSE_KEY", "\"$LICENSE_KEY\""
+      buildConfigField "String", "BASE_URL", "\"$BASE_URL\""
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    release {
+      minifyEnabled true
+      buildConfigField "String", "LICENSE_KEY", "\"$LICENSE_KEY\""
+      buildConfigField "String", "BASE_URL", "\"$BASE_URL\""
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    automationTest {
+      initWith(buildTypes.debug)
+      testCoverageEnabled = true
+    }
+  }
+
+}
+
+
+dependencies {
+  implementation fileTree(dir: "libs", include: ["*.jar"])
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}

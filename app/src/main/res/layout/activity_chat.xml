@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_background_color"
+    android:fitsSystemWindows="true"
+    android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/tvAlertUser"
+      android:fitsSystemWindows="true"
+      android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+      >
+
+    <include layout="@layout/all_toolbar_dark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:overScrollMode="never"
+        android:scrollbarStyle="outsideOverlay"
+        android:stackFromBottom="false"
+        android:transcriptMode="normal"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFreezeChannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:overScrollMode="never"
+        android:padding="@dimen/dp10"
+        android:textColor="@color/txt_alert_info"
+        android:background="@color/alert_info_bg"
+        android:text="@string/txt_frozen_alert"
+        android:drawableLeft="@drawable/ic_info"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/sf_pro_display_regular"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollToBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/fabScrollBottom"
+          android:layout_width="@dimen/fab_size"
+          android:layout_height="@dimen/fab_size"
+          android:layout_margin="@dimen/fab_margin"
+          android:src="@drawable/ic_scroll_bottom"
+          app:fabCustomSize="@dimen/fab_size"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:backgroundTint="@color/fab_transparent_bg"
+          />
+
+      <TextView
+          android:id="@+id/tvMsgCount"
+          android:layout_width="@dimen/chat_msg_count_size"
+          android:layout_height="@dimen/chat_msg_count_size"
+          android:background="@drawable/round_bg"
+          android:elevation="@dimen/chat_msg_count_elevation"
+          android:gravity="center"
+          android:textColor="@color/thread_count_text_color"
+          android:textSize="@dimen/chat_msg_count_txt_size"
+          android:visibility="gone"
+          android:fontFamily="@font/sf_pro_display_regular"
+          app:layout_constraintStart_toStartOf="@id/fabScrollBottom"
+          app:layout_constraintTop_toTopOf="@id/fabScrollBottom"
+          />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </RelativeLayout>
+
+  <FrameLayout
+      android:id="@+id/flKeyboard"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      />
+
+  <FrameLayout
+      android:id="@+id/flChatBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/flKeyboard"
+      >
+
+    <include layout="@layout/chat_box"/>
+
+  </FrameLayout>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvAlertUser"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/flChatBox"
+      android:overScrollMode="never"
+      android:padding="@dimen/dp10"
+      android:textColor="@color/channel_text_black_color"
+      android:background="@color/filter_alert_bg"
+      android:text="@string/profanity_alert"
+      android:drawableLeft="@drawable/ic_alert_info"
+      android:textSize="@dimen/sp14"
+      android:visibility="gone"
+      android:drawablePadding="@dimen/dp15"
+      android:fontFamily="@font/sf_pro_display_regular"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/blockedUserTextView"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/chat_blocked_height"
+      android:layout_alignParentBottom="true"
+      android:background="@color/toolbar_background_color"
+      android:clickable="true"
+      android:focusable="true"
+      android:gravity="center"
+      android:text="@string/blocked_user_toast"
+      android:textSize="@dimen/sp16"
+      android:textColor="@color/white_text_color"
+      android:visibility="gone"
+      android:fontFamily="@font/sf_pro_display_medium"
+      />
+
+  <include layout="@layout/chat_box_attachment"/>
+</RelativeLayout>

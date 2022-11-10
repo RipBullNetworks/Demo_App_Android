@@ -1,0 +1,171 @@
+import dependencies.Deps
+import dependencies.Version
+
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: Deps.dependency
+apply from: '../jacoco.gradle'
+apply from: "../commonFiles/gradleScript/install-git-hook.gradle"
+apply plugin: 'checkstyle'
+apply plugin: 'com.google.gms.google-services'
+//GoogleServicesPlugin.config.disableVersionCheck = true
+//apply plugin: 'newrelic'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
+
+def verCode, verName
+(verCode, verName) = genVersion()
+def auth0DomainDev = "dev-7v3nmnt3.us.auth0.com"
+def auth0ClientIdDev = "wabzNqxpj8XIpMWhpcupwJ7fiPp35jlJ"
+
+android {
+  defaultConfig {
+    applicationId applicationId
+    minSdkVersion Version.minSdk
+    targetSdkVersion Version.targetSdk
+    compileSdkVersion Version.compileSdk
+    versionCode verCode
+    versionName verName
+    multiDexEnabled true
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    buildConfigField "String", "GIPHY_SDK_API_KEY", giphySDKApiKey
+    ndkVersion '20.0.5594570'
+    manifestPlaceholders = [auth0Domain: "@string/com_auth0_domain", auth0Scheme: "inappchat"]
+
+    resValue("string", "com_auth0_domain", auth0DomainDev)
+    resValue("string", "com_auth0_client_id", auth0ClientIdDev)
+    resValue("string", "app_name", "InApp Chat")
+  }
+
+  signingConfigs {
+    production {
+      storeFile file("keystore/ripbull_keystore")
+      storePassword "ripbullnetworks"
+      keyAlias "ripbull"
+      keyPassword "ripbullnetworks"
+    }
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    automationTest {
+      initWith(buildTypes.debug)
+      testCoverageEnabled = true
+    }
+    /*automationTest.initWith(buildTypes.debug)
+    automationTest {
+      applicationIdSuffix ".automationTest"
+      versionNameSuffix "-automationTest"
+      testCoverageEnabled = true
+      matchingFallbacks = ['automationTest', 'debug']
+    }*/
+    debug {
+      testCoverageEnabled true
+      debuggable true
+    }
+  }
+  dexOptions {
+    incremental true
+    javaMaxHeapSize "2g"
+  }
+  sourceSets {
+    main.java.srcDirs += 'src/main/java'
+    test.java.srcDirs += 'src/test/java'
+    androidTest.java.srcDirs += 'src/androidTest/java'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  applicationVariants.all { variant ->
+    variant.outputs.all {
+      outputFileName =
+          "eRTC-App-${variant.versionName}-${variant.versionCode}-${buildTime()}-${variant.name}.apk"
+    }
+  }
+
+ flavorDimensions "default"
+  productFlavors {
+    stage {
+      dimension "default"
+      //applicationIdSuffix ".stage"
+      versionName "-stage"
+      resValue("string", "app_name", "InApp Chat Stage")
+    }
+    qa {
+      dimension "default"
+      applicationIdSuffix ".qa"
+      versionName "-qa"
+      resValue("string", "app_name", "InApp Chat QA")
+    }
+    prod {
+      dimension "default"
+      signingConfig signingConfigs.production
+      resValue("string", "app_name", "InApp Chat Prod")
+    }
+    dev {
+      dimension "default"
+      //applicationIdSuffix ".qa"
+      versionName "-dev"
+      resValue("string", "app_name", "InApp Chat Dev")
+    }
+  }
+}
+repositories {
+  mavenCentral()
+}
+
+checkstyle {
+  configFile file("${rootDir}/commonFiles/styleGuide/google_checks.xml")
+  toolVersion = "8.4"
+  showViolations true
+  ignoreFailures false
+}
+task checkStyle(type: Checkstyle) {
+  source 'src'
+  include '**/*.java'
+  exclude '**/gen/**'
+  exclude '**/BuildConfig.java'
+  exclude '**/R.java'
+  exclude '**/models/**'
+  exclude '**/model/**'
+  exclude '**/test/**'
+  exclude '**/androidTest/**'
+  showViolations true
+  classpath = files()
+  reports {
+    xml.enabled true
+    html.enabled true
+  }
+}
+
+def genVersion() {
+  Properties versionProps = new Properties()
+  versionProps.load(new FileInputStream(file('../app/version.properties')))
+
+  def versionMajor = versionProps['major'].toInteger()
+  def versionMinor = versionProps['minor'].toInteger()
+  def versionPatch = versionProps['patch'].toInteger()
+  def versionBuild = versionProps['build'].toInteger()
+
+  def verCode = (versionMajor * 10000) + (versionMinor * 1000) +
+      (versionPatch * 100) +
+      versionBuild
+  def verName = "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
+  return [verCode, verName]
+}
+
+def buildTime() {
+  def df = new SimpleDateFormat("ddMMM_hh.mma")
+  df.setTimeZone(TimeZone.getTimeZone("IST"))
+  return df.format(new Date())
+}

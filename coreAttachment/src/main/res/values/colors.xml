@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="emojiGray">#E5E5E5</color>
+    <color name="emojiLightGray">#F9F9F9</color>
+    <color name="emojiDarkGray">#D0D0D0</color>
+    <color name="image_tint">#FFFFFF</color>
+</resources>

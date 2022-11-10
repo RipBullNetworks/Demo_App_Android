@@ -1,0 +1,24 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ripbull.ertc.mqtt"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Volumes/Work/Github/Rip Bull/Dev/Android/sdk-mqtt/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Volumes/Work/Github/Rip Bull/Dev/Android/sdk-mqtt/src/main/AndroidManifest.xml
+10
+11    <application>
+11-->/Volumes/Work/Github/Rip Bull/Dev/Android/sdk-mqtt/src/main/AndroidManifest.xml:4:5-9:19
+12        <service
+12-->/Volumes/Work/Github/Rip Bull/Dev/Android/sdk-mqtt/src/main/AndroidManifest.xml:5:9-8:19
+13            android:name="com.ripbull.ertc.mqtt.service.MqttService"
+13-->/Volumes/Work/Github/Rip Bull/Dev/Android/sdk-mqtt/src/main/AndroidManifest.xml:6:17-73
+14            android:exported="false" >
+14-->/Volumes/Work/Github/Rip Bull/Dev/Android/sdk-mqtt/src/main/AndroidManifest.xml:7:17-41
+15        </service>
+16    </application>
+17
+18</manifest>
